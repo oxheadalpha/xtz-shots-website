@@ -28,11 +28,13 @@ page_nav:
 #        url: '#'
 ---
 
-# Attributes
- * Publish date
- * Snapshot_Type
- * Snapshot_ID
- * BlockHash
- * BlockNum
- * Blocktime
- * Download links
+<div class="callout callout--info">
+    <p><strong>Attributes</strong></p>
+    <li>Publish date</li>
+    <li>Snapshot_Type</li>
+    <li>Snapshot_ID</li>
+    <li>BlockHash</li>
+    <li>BlockNum</li>
+    <li>BlockNum</li>
+    <li>Download links</li>
+</div>

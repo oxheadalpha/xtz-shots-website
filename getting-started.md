@@ -28,16 +28,6 @@ page_nav:
 #        url: '#'
 ---
 
-# Attributes
-Publish date
-Snapshot_Type
-Snapshot_ID
-BlockHash
-BlockNum
-Blocktime
-Download link
-
-<div class="example"></div>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">doks</span><span class="pi">:</span>
-    <span class="na">baseurl</span><span class="pi">:</span> <span class="s">/project</span>
-</code></pre></div></div>
+```
+tezos-node snapshot import FILE.full --block <BLOCK_HASH>
+```
