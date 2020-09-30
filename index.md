@@ -8,7 +8,7 @@ title: XTZ-Shots
 description: A repository of Tezos snapshots - regularly updated and fast to download from anywhere in the world.
 buttons:
     - content: How to use XTZ-shots
-      url: '#'
+      url: '/getting-started'
       external_url: false
    # - icon: github
    #   content: Button with icon
@@ -27,13 +27,13 @@ grid_navigation:
     - title: Mainnet
       excerpt: mainnet snapshots
       cta: Download
-      url: '#'
+      url: '/mainnet-snapshot'
     - title: Delphinet
       excerpt: delphinet snapshots
       cta: Download
-      url: '#'
+      url: '/delphinet-snapshot'
     - title: Dalphanet
       excerpt: dalphanet snapshots
       cta: Download
-      url: '#'
+      url: '/dalphanet-snapshot'
 ---

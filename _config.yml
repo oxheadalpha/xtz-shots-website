@@ -8,9 +8,9 @@ doks:
             image:
         nav:
             - item_name: Mainnet
-              item_url: /configuration
+              item_url: /mainnet-snapshot
             - item_name: Delphinet
-              item_url: '#'
+              item_url: 'https://midl.dev'
             - item_name: Delphanet
               item_url: '#'
     footer:
