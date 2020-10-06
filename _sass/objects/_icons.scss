@@ -239,8 +239,14 @@
 	}
 }
 
+.icon--discord {
+	&::before {
+		content: '\e924';
+	}
+}
+
 .icon--sphere {
 	&::before {
-		content: '\e9c9';
+		content: '\e925';
 	}
 }
