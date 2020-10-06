@@ -31,9 +31,11 @@ page_nav:
 
 This website helps people operating blockchain nodes to synchronize new blockchain nodes, so they are operational faster.
 
+This project was sponsored by a grant from the [Tezos foundation](https://tezos.foundation/).
+
 ### How to use
 
-We are the first snapshot website to provide **permalinks**, that is, an URL that reliably provides a recent snapshot.
+We are the first snapshot website to provide **permalinks**: URLs that never change and reliably point to a recent snapshot.
 
 For example, to download a recent full snapshot of Tezos mainnet, simply do:
 
