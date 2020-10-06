@@ -22,7 +22,7 @@ micro_nav: true
 page_nav:
     home:
         content: Previous page
-        url: 'index.html'
+        url: 'https://xtz-shots.io/index.html'
 ---
 
 ```
