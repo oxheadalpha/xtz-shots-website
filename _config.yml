@@ -6,6 +6,7 @@ doks:
         logo:
             text: XTZ-Shots
             image:
+            logo_url: 'https://xtz-shots.io'
         nav:
             - item_name: Mainnet
               item_url: 'https://mainnet.xtz-shots.io/'

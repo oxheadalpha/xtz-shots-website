@@ -17,6 +17,7 @@ author:
 
 # Micro navigation
 micro_nav: true
+url: 'https://xtz-shots.io/index.html'
 
 # Page navigation
 page_nav:
