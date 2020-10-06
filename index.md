@@ -25,15 +25,15 @@ author:
 # Grid navigation
 grid_navigation:
     - title: Mainnet
-      excerpt: mainnet snapshots
+      excerpt: Snapshots for the Tezos blockchain (you probably want this).
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
     - title: Delphinet
-      excerpt: delphinet snapshots
+      excerpt: Test chain for the Delphi protocol upgrade.
       cta: Download
       url: 'https://delphinet.xtz-shots.io/'
     - title: Dalphanet
-      excerpt: dalphanet snapshots
+      excerpt: Test chain for the future Tezos network after Delphi.
       cta: Download
       url: 'https://dalphanet.xtz-shots.io/'
 ---
