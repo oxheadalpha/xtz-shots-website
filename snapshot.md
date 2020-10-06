@@ -40,3 +40,10 @@ Block timestamp: $BLOCK_TIMESTAMP
 ## Full snapshot
 
 [Full Snapshot](${snapshot_name}.full)
+
+HOW TO USE
+
+```
+wget https://delphinet.xtz-shots.io/tezos-delphinet-83316.rolling
+tezos-node snapshot import tezos-delphinet-83316.rolling --block BMDKHftB5biRp9ZdkcMaoGby5UhT38eR8ntB1SWQ54fDNqKgr1n
+```
