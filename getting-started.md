@@ -41,7 +41,7 @@ For example, to download a recent full snapshot of Tezos mainnet, simply do:
 wget https://mainnet.xtz-shots.io/full
 ```
 
-More details can be found in the [snapshot page](https://mainnet-xtz-shots.io).
+More details can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
 ### How does it work ?
 
