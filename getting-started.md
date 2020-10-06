@@ -10,10 +10,10 @@ description: How to use Tezos snapshots
 
 # Author box
 author:
-    title: MIDL.dev
-    title_url: 'https://midl.dev/'
+    title: Brought to you by MIDL.dev
+    title_url: 'https://midl.dev/tezos-suite/'
     external_url: true
-    description: MIDL.dev is a staking-as-a-service company
+    description: A staking-as-a-service company - we help you bake your XTZ. <a href="https://MIDL.dev/tezos-suite" target="_blank">Learn more</a>.
 
 # Micro navigation
 micro_nav: true
