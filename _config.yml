@@ -24,8 +24,8 @@ doks:
               profile_url: 'https://github.com/midl-dev'
             - network_name: twitter
               profile_url: 'https://twitter.com/midl_dev'
-#            - network_name: sphere
-#              profile_url: 'https://midl.dev'
+            - network_name: sphere
+              profile_url: 'https://midl.dev'
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
@@ -33,12 +33,12 @@ doks:
 
 # SASS settings
 sass:
-    sass_dir: ./doks-theme/_sass
+    sass_dir: ./_sass
     style: :compressed
 
 # Jekyll settings
-layouts_dir: ./doks-theme/_layouts
-includes_dir: ./doks-theme/_includes
+layouts_dir: ./_layouts
+includes_dir: ./_includes
 exclude: [ 'README.md', 'CHANGELOG.md' ]
 permalink: /:title/
 
