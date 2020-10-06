@@ -11,7 +11,7 @@ description: Dalphanet is an experimental test network for the upcoming protocol
 # Author box
 author:
     title: MIDL.dev
-    title_url: '/dalphanet-snapshot'
+    title_url: 'https://midl.dev/'
     external_url: true
     description: MIDL.dev is a staking-as-a-service company
 
@@ -22,7 +22,7 @@ micro_nav: true
 page_nav:
     home:
         content: Previous page
-        url: '/dalphanet-snapshot'
+        url: '/index'
 #    next:
 #        content: Next page
 #        url: '#'

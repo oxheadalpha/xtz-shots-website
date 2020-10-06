@@ -11,7 +11,7 @@ description: Follow instructions below to download the latest snapshot
 # Author box
 author:
     title: MIDL.dev
-    title_url: '/getting-started.html'
+    title_url: 'https://midl.dev/'
     external_url: false
     description: MIDL.dev is a staking-as-a-service company
 

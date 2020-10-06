@@ -8,11 +8,12 @@ doks:
             image:
         nav:
             - item_name: Mainnet
-              item_url: /mainnet-snapshot
+              item_url: 'https://mainnet.xtz-shots.io/'
             - item_name: Delphinet
-              item_url: 'https://midl.dev'
+              item_url: 'https://delphinet.xtz-shots.io/'
             - item_name: Delphanet
-              item_url: '#'
+              item_url: 'https://dalphanet.xtz-shots.io/'
+
     footer:
         content:
             logo:

@@ -27,13 +27,13 @@ grid_navigation:
     - title: Mainnet
       excerpt: mainnet snapshots
       cta: Download
-      url: '/mainnet-snapshot'
+      url: 'https://mainnet.xtz-shots.io/'
     - title: Delphinet
       excerpt: delphinet snapshots
       cta: Download
-      url: '/delphinet-snapshot'
+      url: 'https://delphinet.xtz-shots.io/'
     - title: Dalphanet
       excerpt: dalphanet snapshots
       cta: Download
-      url: '/dalphanet-snapshot'
+      url: 'https://dalphanet.xtz-shots.io/'
 ---
