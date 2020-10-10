@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: About XTZ-shots
-description: How to use Tezos snapshots
+description: 
 
 # Author box
 author:
