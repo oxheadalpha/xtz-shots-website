@@ -29,11 +29,11 @@ grid_navigation:
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
     - title: Delphinet
-      excerpt: Test chain for the Delphi protocol.
+      excerpt: Test chain for the Delphi protocol testnet.
       cta: Download
       url: 'https://delphinet.xtz-shots.io/'
-    - title: Dalphanet
-      excerpt: Test chain for the future Tezos network after Delphi.
+    - title: Edonet
+      excerpt: Test chain for the Edo protocol testnet.
       cta: Download
-      url: 'https://dalphanet.xtz-shots.io/'
+      url: 'https://edonet.xtz-shots.io/'
 ---
