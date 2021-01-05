@@ -45,6 +45,10 @@ wget https://mainnet.xtz-shots.io/full
 
 More details can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
+#### Tezos node version
+
+We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
+
 ### How does it work ?
 
 The snapshot generation engine is deployed on [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine).
