@@ -29,7 +29,9 @@ page_nav:
 
 [Tezos](https://tezos.com) is a proof-of-stake blockchain.
 
-This website helps people operating blockchain nodes to synchronize new blockchain nodes, so they are operational faster.
+This website helps people operating Tezos nodes to synchronize to the head of the chain, so they are operational faster.
+
+New snapshots are uploaded twice a day.
 
 This project was sponsored by a grant from the [Tezos foundation](https://tezos.foundation/).
 
