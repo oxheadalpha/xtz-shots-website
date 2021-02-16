@@ -10,9 +10,7 @@ doks:
         nav:
             - item_name: Mainnet
               item_url: 'https://mainnet.xtz-shots.io/'
-            - item_name: Delphinet
-              item_url: 'https://delphinet.xtz-shots.io/'
-            - item_name: Edonet
+            - item_name: Edo2net
               item_url: 'https://edonet.xtz-shots.io/'
 
     footer:

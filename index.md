@@ -28,12 +28,8 @@ grid_navigation:
       excerpt: Snapshots for the Tezos blockchain (you probably want this).
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
-    - title: Delphinet
-      excerpt: Test chain for the Delphi protocol testnet.
-      cta: Download
-      url: 'https://delphinet.xtz-shots.io/'
     - title: Edonet
-      excerpt: Test chain for the Edo protocol testnet.
+      excerpt: Test chain for the Edo2Kz testnet.
       cta: Download
       url: 'https://edonet.xtz-shots.io/'
 ---
