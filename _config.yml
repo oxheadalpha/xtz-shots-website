@@ -11,7 +11,7 @@ doks:
             - item_name: Mainnet
               item_url: 'https://mainnet.xtz-shots.io/'
             - item_name: Edo2net
-              item_url: 'https://edonet.xtz-shots.io/'
+              item_url: 'https://edo2net.xtz-shots.io/'
 
     footer:
         content:

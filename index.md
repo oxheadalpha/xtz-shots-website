@@ -31,5 +31,5 @@ grid_navigation:
     - title: Edonet
       excerpt: Test chain for the Edo2Kz testnet.
       cta: Download
-      url: 'https://edonet.xtz-shots.io/'
+      url: 'https://edo2net.xtz-shots.io/'
 ---
