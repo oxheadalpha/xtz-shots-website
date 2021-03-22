@@ -32,4 +32,8 @@ grid_navigation:
       excerpt: Test chain for the Edo2Kz testnet.
       cta: Download
       url: 'https://edo2net.xtz-shots.io/'
+    - title: Florencenet
+      excerpt: Test chain for the Florence testnet (without baking accounts).
+      cta: Download
+      url: 'https://florencenet.xtz-shots.io/'
 ---
