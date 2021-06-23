@@ -28,12 +28,12 @@ grid_navigation:
       excerpt: Snapshots for the Tezos blockchain (you probably want this).
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
-    - title: Edonet
-      excerpt: Test chain for the Edo2Kz testnet.
-      cta: Download
-      url: 'https://edo2net.xtz-shots.io/'
     - title: Florencenet
       excerpt: Test chain for the Florence testnet (without baking accounts).
       cta: Download
       url: 'https://florencenet.xtz-shots.io/'
+    - title: Granadanet
+      excerpt: Test chain for Granadanet.
+      cta: Download
+      url: 'https://granadanet.xtz-shots.io/'
 ---
