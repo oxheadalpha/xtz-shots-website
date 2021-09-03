@@ -29,7 +29,7 @@ grid_navigation:
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
     - title: Granadanet
-      excerpt: Test chain for Granadanet.
+      excerpt: Snapshots for Granadanet, test chain for the Granada protocol.
       cta: Download
       url: 'https://granadanet.xtz-shots.io/'
 ---
