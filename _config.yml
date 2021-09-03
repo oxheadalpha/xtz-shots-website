@@ -18,7 +18,7 @@ doks:
             logo:
                 text: XTZ-Shots
                 image:
-            copyright: Copyright &copy; 2020. - MIDL.Dev <br>All rights reserved.
+            copyright: Copyright &copy; 2021. - MIDL.Dev <br>All rights reserved.
         social_list:
             - network_name: github
               profile_url: 'https://github.com/midl-dev'
