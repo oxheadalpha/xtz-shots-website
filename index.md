@@ -32,4 +32,8 @@ grid_navigation:
       excerpt: Snapshots for Granadanet, test chain for the Granada protocol.
       cta: Download
       url: 'https://granadanet.xtz-shots.io/'
+    - title: Hangzhounet
+      excerpt: Coming soon
+      cta: Download
+      url: 'https://hangzhounet.xtz-shots.io/'
 ---
