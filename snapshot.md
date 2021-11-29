@@ -10,10 +10,10 @@ description:
 
 # Author box
 author:
-    title: MIDL.dev
-    title_url: 'https://midl.dev/'
+    title: Oxhead Alpha
+    title_url: 'https://oxheadalpha.com'
     external_url: true
-    description: MIDL.dev is a staking-as-a-service company
+    description: Oxhead Alpha is a staking-as-a-service company
 
 # Micro navigation
 micro_nav: true

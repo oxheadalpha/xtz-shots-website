@@ -10,10 +10,10 @@ description:
 
 # Author box
 author:
-    title: Brought to you by MIDL.dev
-    title_url: 'https://midl.dev/tezos-suite/'
+    title: Brought to you by Oxhead Alpha
+    title_url: 'https://medium.com/the-aleph'
     external_url: true
-    description: A proof-of-stake infrastructure company - we help you bake your XTZ. <a href="https://MIDL.dev/tezos-suite" target="_blank">Learn more</a>.
+    description: A proof-of-stake infrastructure company - we help you bake your XTZ. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 
 # Micro navigation
 micro_nav: true
@@ -58,11 +58,11 @@ The snapshot generation engine is deployed on [Google Kubernetes Engine](https:/
 All source code is [open source](https://github.com/midl-dev/tezos-snapshot-generator) so anyone can deploy a separate snapshot generator setup in the cloud.
 
 
-### Brought to you by MIDL.dev
+### Brought to you by Oxhead Alpha
 
-We are [MIDL.dev](https://midl.dev), a blockchain infrastructure company.
+We are [Oxhead Alpha](https://www.oxheadalpha.com/), a blockchain infrastructure company.
 
-We maintain the [Tezos Suite](https://midl.dev/tezos-suite/) of open-source software projects to deploy secure bakers and nodes.
+We maintain the [Tezos Suite](https://medium.com/the-aleph) of open-source software projects to deploy secure bakers and nodes.
 
 Contact us if you need help with:
 
@@ -74,4 +74,4 @@ Contact us if you need help with:
 
 Users are solely responsible for any risks associated with usage of the Tezos network. Users should do their own research to determine if Tezos is the appropriate platform for their needs and should apply judgement and care in their network interactions.
 
-Unless required by applicable law or agreed to in writing, MIDL.dev provides a service on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using our services.
+Unless required by applicable law or agreed to in writing, Oxhead Alpha provides a service on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using our services.
