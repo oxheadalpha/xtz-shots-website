@@ -36,21 +36,47 @@ New snapshots are uploaded twice a day. (Granada and Mainnet)
 We're are migrating to a new snapshot system where -
 
 Hangzhounet (currently deployed)
-*  Rolling snapshots **every 30 seconds**
-*  Rolling tarballs **every 30 seconds**
-*  Archive tarballs **every 1 minute 18 seconds**
+
+* Rolling snapshots **every 30 seconds**
+
+* Rolling tarballs **every 30 seconds**
+
+* Archive tarballs **every 1 minute 18 seconds**
 
 Granada (planned)
-*  Rolling snapshots **every 30 seconds**
-*  Rolling tarballs **every 30 seconds**
-*  Archive tarballs **every 1 minute 18 seconds**
+
+* Rolling snapshots **every 30 seconds**
+
+* Rolling tarballs **every 30 seconds**
+
+* Archive tarballs **every 1 minute 18 seconds**
 
 Mainnet (planned)
-*  Rolling snapshots **every 60 seconds**
-*  Rolling tarballs **every 60 seconds**
-*  Archive tarballs **every 12 hours**
+
+* Rolling snapshots **every 60 seconds**
+
+* Rolling tarballs **every 60 seconds**
+
+* Archive tarballs **every 12 hours**
 
 This project was sponsored by a grant from the [Tezos foundation](https://tezos.foundation/).
+
+## What is a tarball ?
+
+Tezos snapshots can take a long time to import, especially for mainnet. 
+
+However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you you download.
+
+For example- you will have a fully synced mainnet rolling node in **9 minutes**.
+
+## How to use a tarball?
+
+For example to expand one of our tarballs for an **hangzhounet archive node** -
+
+```bash
+curl -LfsS "https://d1u3sv5wkszf4p.cloudfront.net/hangzhounet-archive-tarball" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
 
 ### How to use
 
@@ -58,7 +84,7 @@ We are the first snapshot website to provide **permalinks**: URLs that never cha
 
 For example, to download a recent full snapshot of Tezos mainnet, simply do:
 
-```
+```bash
 wget https://mainnet.xtz-shots.io/full
 ```
 
@@ -73,23 +99,6 @@ We display the Tezos node version used for snapshot generation. For best results
 The snapshot generation engine is deployed on [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine).
 
 All source code is [open source](https://github.com/midl-dev/tezos-snapshot-generator) so anyone can deploy a separate snapshot generator setup in the cloud.
-
-### What is a tarball ?
-
-Tezos snapshots can take a long time to import, especially for mainnet. 
-
-However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you you download.
-
-For example- you will have a fully synced mainnet rolling node in **9 minutes**.
-
-## How to use a tarball?
-
-For example to expand one of our tarballs for a archive hangzhounet node -
-
-```bash
-curl -LfsS "https://d1u3sv5wkszf4p.cloudfront.net/hangzhounet-archive-tarball" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
 
 ### Brought to you by Oxhead Alpha
 
