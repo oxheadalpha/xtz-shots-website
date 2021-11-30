@@ -33,7 +33,7 @@ grid_navigation:
       cta: Download
       url: 'https://granadanet.xtz-shots.io/'
     - title: Hangzhounet
-      excerpt: Coming soon
+      excerpt: Snapshots for Hangzhounet, test chain for the Hangzhou protocol.
       cta: Download
       url: 'https://hangzhounet.xtz-shots.io/'
 ---
