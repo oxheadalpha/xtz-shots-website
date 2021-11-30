@@ -13,7 +13,7 @@ author:
     title: Oxhead Alpha
     title_url: 'https://oxheadalpha.com'
     external_url: true
-    description: Oxhead Alpha is a staking-as-a-service company
+    description: Oxhead Alpha is a tezos core development company
 
 # Micro navigation
 micro_nav: true

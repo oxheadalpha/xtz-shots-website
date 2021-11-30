@@ -13,7 +13,7 @@ author:
     title: Brought to you by Oxhead Alpha
     title_url: 'https://medium.com/the-aleph'
     external_url: true
-    description: A proof-of-stake infrastructure company - we help you bake your XTZ. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
+    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 
 # Micro navigation
 micro_nav: true
@@ -65,7 +65,7 @@ This project was sponsored by a grant from the [Tezos foundation](https://tezos.
 
 Tezos snapshots can take a long time to import, especially for mainnet. 
 
-However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you you download.
+However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you to download.
 
 For example- you will have a fully synced mainnet rolling node in **9 minutes**.
 
@@ -77,6 +77,8 @@ For example to expand one of our tarballs for an **hangzhounet archive node** -
 curl -LfsS "https://d1u3sv5wkszf4p.cloudfront.net/hangzhounet-archive-tarball" \
 | lz4 -d | tar -x -C "/var/tezos"
 ```
+
+While Tezos tarballs can help you bootstrap a fresh node faster, it does it at the expense of safety: unlike snapshot import, no sanity check is performed before starting the node. Please evaluate whether this is appropriate for your use case.
 
 ### How to use
 
@@ -90,7 +92,7 @@ wget https://mainnet.xtz-shots.io/full
 
 More details can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
-#### Tezos node version
+### Tezos node version
 
 We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
 
@@ -104,7 +106,7 @@ All source code is [open source](https://github.com/midl-dev/tezos-snapshot-gene
 
 We are [Oxhead Alpha](https://www.oxheadalpha.com/), a blockchain infrastructure company.
 
-We maintain the [Tezos Suite](https://medium.com/the-aleph) of open-source software projects to deploy secure bakers and nodes.
+We maintain a [series of open source infrastructure projects](https://github.com/oxheadalpha) to further the tezos ecosystem of open-source software projects to deploy secure bakers and nodes.
 
 Contact us if you need help with:
 
