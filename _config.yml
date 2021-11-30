@@ -25,7 +25,7 @@ doks:
             - network_name: github
               profile_url: 'https://github.com/oxheadalpha'
             - network_name: twitter
-              profile_url: 'https://twitter.com/oxheadalpha
+              profile_url: 'https://twitter.com/oxheadalpha'
             - network_name: sphere
               profile_url: 'https://oxheadalpha.com'
     google_analytics:
