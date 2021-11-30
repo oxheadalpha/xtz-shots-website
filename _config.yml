@@ -20,14 +20,14 @@ doks:
             logo:
                 text: XTZ-Shots
                 image:
-            copyright: Copyright &copy; 2021. - MIDL.Dev <br>All rights reserved.
+            copyright: Copyright &copy; 2021. - Oxhead Alpha <br>All rights reserved.
         social_list:
             - network_name: github
-              profile_url: 'https://github.com/midl-dev'
+              profile_url: 'https://github.com/oxheadalpha'
             - network_name: twitter
-              profile_url: 'https://twitter.com/midl_dev'
+              profile_url: 'https://twitter.com/oxheadalpha
             - network_name: sphere
-              profile_url: 'https://midl.dev'
+              profile_url: 'https://oxheadalpha.com'
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:

@@ -17,10 +17,10 @@ buttons:
 
 # Author box
 author:
-    title: Brought to you by MIDL.dev
-    title_url: 'https://midl.dev/tezos-suite/'
+    title: Brought to you by Oxhead Alpha
+    title_url: 'https://medium.com/the-aleph'
     external_url: true
-    description: A proof-of-stake infrastructure company - we help you bake your tez. <a href="https://MIDL.dev/tezos-suite" target="_blank">Learn more</a>.
+    description: A proof-of-stake infrastructure company - we help you bake your tez. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 
 # Grid navigation
 grid_navigation:

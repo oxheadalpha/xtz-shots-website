@@ -10,10 +10,10 @@ description:
 
 # Author box
 author:
-    title: Brought to you by MIDL.dev
-    title_url: 'https://midl.dev/tezos-suite/'
+    title: Brought to you by Oxhead Alpha
+    title_url: 'https://medium.com/the-aleph'
     external_url: true
-    description: A proof-of-stake infrastructure company - we help you bake your XTZ. <a href="https://MIDL.dev/tezos-suite" target="_blank">Learn more</a>.
+    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 
 # Micro navigation
 micro_nav: true
@@ -31,9 +31,54 @@ page_nav:
 
 This website helps people operating Tezos nodes to synchronize to the head of the chain, so they are operational faster.
 
-New snapshots are uploaded twice a day.
+New snapshots are uploaded twice a day. (Granada and Mainnet)
+
+We're are migrating to a new snapshot system where -
+
+Hangzhounet (currently deployed)
+
+* Rolling snapshots **every 30 seconds**
+
+* Rolling tarballs **every 30 seconds**
+
+* Archive tarballs **every 1 minute 18 seconds**
+
+Granada (planned)
+
+* Rolling snapshots **every 30 seconds**
+
+* Rolling tarballs **every 30 seconds**
+
+* Archive tarballs **every 1 minute 18 seconds**
+
+Mainnet (planned)
+
+* Rolling snapshots **every 60 seconds**
+
+* Rolling tarballs **every 60 seconds**
+
+* Archive tarballs **every 12 hours**
 
 This project was sponsored by a grant from the [Tezos foundation](https://tezos.foundation/).
+
+## What is a tarball ?
+
+Tezos snapshots can take a long time to import, especially for mainnet. 
+
+However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you to download.
+
+For example- you will have a fully synced mainnet rolling node in **9 minutes**.
+
+## How to use a tarball?
+
+For example to expand one of our tarballs for an **hangzhounet archive node** -
+
+```bash
+curl -LfsS "https://d1u3sv5wkszf4p.cloudfront.net/hangzhounet-archive-tarball" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
+
+While Tezos tarballs can help you bootstrap a fresh node faster, it does it at the expense of safety: unlike snapshot import, no sanity check is performed before starting the node. Please evaluate whether this is appropriate for your use case.
 
 ### How to use
 
@@ -41,13 +86,13 @@ We are the first snapshot website to provide **permalinks**: URLs that never cha
 
 For example, to download a recent full snapshot of Tezos mainnet, simply do:
 
-```
+```bash
 wget https://mainnet.xtz-shots.io/full
 ```
 
 More details can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
-#### Tezos node version
+### Tezos node version
 
 We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
 
@@ -57,12 +102,11 @@ The snapshot generation engine is deployed on [Google Kubernetes Engine](https:/
 
 All source code is [open source](https://github.com/midl-dev/tezos-snapshot-generator) so anyone can deploy a separate snapshot generator setup in the cloud.
 
+### Brought to you by Oxhead Alpha
 
-### Brought to you by MIDL.dev
+We are [Oxhead Alpha](https://www.oxheadalpha.com/), a blockchain infrastructure company.
 
-We are [MIDL.dev](https://midl.dev), a blockchain infrastructure company.
-
-We maintain the [Tezos Suite](https://midl.dev/tezos-suite/) of open-source software projects to deploy secure bakers and nodes.
+We maintain a [series of open source infrastructure projects](https://github.com/oxheadalpha) to further the tezos ecosystem of open-source software projects to deploy secure bakers and nodes.
 
 Contact us if you need help with:
 
@@ -74,4 +118,4 @@ Contact us if you need help with:
 
 Users are solely responsible for any risks associated with usage of the Tezos network. Users should do their own research to determine if Tezos is the appropriate platform for their needs and should apply judgement and care in their network interactions.
 
-Unless required by applicable law or agreed to in writing, MIDL.dev provides a service on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using our services.
+Unless required by applicable law or agreed to in writing, Oxhead Alpha provides a service on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using our services.
