@@ -37,25 +37,25 @@ We're are migrating to a new snapshot system where -
 
 Hangzhounet (currently deployed)
 
-* Rolling snapshots **every 30 seconds**
+* Rolling snapshots **every 35 minutes**
 
-* Rolling tarballs **every 30 seconds**
+* Rolling tarballs **every 35 minutes**
 
-* Archive tarballs **every 1 minute 18 seconds**
+* Archive tarballs **every 35 minutes**
 
 Granada (planned)
 
-* Rolling snapshots **every 30 seconds**
+* Rolling snapshots **every 35 minutes**
 
-* Rolling tarballs **every 30 seconds**
+* Rolling tarballs **every 35 minutes**
 
-* Archive tarballs **every 1 minute 18 seconds**
+* Archive tarballs **every 35 minutes**
 
 Mainnet (planned)
 
-* Rolling snapshots **every 60 seconds**
+* Rolling snapshots **every 1 hour and 45 minutes**
 
-* Rolling tarballs **every 60 seconds**
+* Rolling tarballs **every 1 hour and 45 minutes**
 
 * Archive tarballs **every 12 hours**
 
