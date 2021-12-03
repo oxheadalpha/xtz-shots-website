@@ -28,8 +28,8 @@ grid_navigation:
       excerpt: Snapshots for the Tezos blockchain (you probably want this).
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
-    - title: Granadanet
-      excerpt: Snapshots for Granadanet, test chain for the Granada protocol.
+    - title: Kaizen
+      excerpt: Snapshots for Kaizen (formerly known as Granadanet)
       cta: Download
       url: 'https://granadanet.xtz-shots.io/'
     - title: Hangzhounet
