@@ -32,8 +32,4 @@ grid_navigation:
       excerpt: Snapshots for Hangzhounet, test chain for the Hangzhou protocol.
       cta: Download
       url: 'https://hangzhounet.xtz-shots.io/'
-    - title: Kaizen
-      excerpt: Snapshots for Kaizen, experimental permanent testnet
-      cta: Download
-      url: 'https://granadanet.xtz-shots.io/'
 ---
