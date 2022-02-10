@@ -32,4 +32,8 @@ grid_navigation:
       excerpt: Snapshots for Hangzhounet, test chain for the Hangzhou protocol.
       cta: Download
       url: 'https://hangzhounet.xtz-shots.io/'
+    - title: Ithacanet
+      excerpt: Snapshots for Ithacanet, test chain for the Ithaca protocol.
+      cta: Download
+      url: 'https://ithacanet.xtz-shots.io/'
 ---
