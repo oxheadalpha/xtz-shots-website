@@ -3,47 +3,159 @@
 layout: snapshot
 keywords:
 comments: false
-
 # Hero section
-title: Mainnet snapshots
-description: 
-
+title: Tezos snapshots for ${NETWORK}
+description:
 # Author box
 author:
-    title: Oxhead Alpha
-    title_url: 'https://oxheadalpha.com'
-    external_url: true
-    description: Oxhead Alpha is a tezos core development company
-
+  title: Brought to you by Oxhead Alpha
+  title_url: "https://medium.com/the-aleph"
+  external_url: true
+  description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 # Micro navigation
 micro_nav: true
-
 # Page navigation
 page_nav:
-    home:
-        content: Previous page
-        url: 'https://xtz-shots.io/index.html'
+  home:
+    content: Previous page
+    url: https://xtz-shots.io/index.html
 ---
 
-## Tezos snapshot for ${TEZOS_NETWORK}
+{% assign network_substring = site.data.tezos_metadata.network | remove: "net" %}
+{% capture domain_name %}https://{{ site.data.tezos_metadata.network }}.{{ site.domain_name }}{% endcapture %}
 
-Block height: $BLOCK_HEIGHT
+{% if network_substring == "main" %}
+  {% assign tzstats_subdomain = "" %}
+  {% assign tzkt_subdomain = "" %}
+{% elsif network_substring == "hangzhou" %}
+  {% assign tzstats_subdomain = network_substring | append: "." %}
+  {% assign tzkt_subdomain = "hangzhou2net" | append: "." %}
+{% else %}
+  {% assign tzstats_subdomain = network_substring | append: "." %}
+  {% assign tzkt_subdomain = site.data.tezos_metadata.network | append: "." %}
+{% endif %}
+# Tezos snapshots for {{ site.data.tezos_metadata.network }}
 
-Block hash: \`${BLOCK_HASH}\` - [Verify on TzStats](https://tzstats.com/${BLOCK_HASH}) - [Verify on TzKT](https://tzkt.io/${BLOCK_HASH})
-
-Block timestamp: $BLOCK_TIMESTAMP
+Octez version used for snapshotting: `{{ site.data.rolling_snapshot.tezos_version }}`
 
 ## Rolling snapshot
 
-[Rolling Snapshot](${snapshot_name}.rolling)
+[Download Rolling Snapshot]({{ domain_name }}/{{ site.data.rolling_snapshot.filename }})
 
-## Full snapshot
+Block height: `{{ site.data.rolling_snapshot.block_height }}`
 
-[Full Snapshot](${snapshot_name}.full)
+Block hash: `{{ site.data.rolling_snapshot.block_hash }}`
 
-HOW TO USE
+[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ site.data.rolling_snapshot.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ site.data.rolling_snapshot.block_hash }}){:target="\_blank"}
+
+Block timestamp: `{{ site.data.rolling_snapshot.block_timestamp }}`
+
+Size in bytes: `{{ site.data.rolling_snapshot.filesize_bytes }}`
+
+Checksum (SHA256):
 
 ```
-wget https://delphinet.xtz-shots.io/tezos-delphinet-83316.rolling
-tezos-node snapshot import tezos-delphinet-83316.rolling --block BMDKHftB5biRp9ZdkcMaoGby5UhT38eR8ntB1SWQ54fDNqKgr1n
+{{ site.data.rolling_snapshot.sha256 }}
 ```
+
+[Artifact Metadata]({{ domain_name }}/rolling-snapshot-metadata)
+
+## Archive tarball
+
+[Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }})
+
+Block height: `{{ site.data.archive_tarball.block_height }}`
+
+Block hash: `{{ site.data.archive_tarball.block_hash }}`
+
+[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ site.data.archive_tarball.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ site.data.archive_tarball.block_hash }}){:target="\_blank"}
+
+Block timestamp: `{{ site.data.archive_tarball.block_timestamp }}`
+
+Size in bytes: `{{ site.data.archive_tarball.filesize_bytes }}`
+
+Checksum (SHA256):
+
+```
+{{ site.data.archive_tarball.sha256 }}
+```
+
+[Artifact Metadata]({{ domain_name }}/archive-tarball-metadata)
+
+## Rolling tarball
+
+[Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }})
+
+Block height: `{{ site.data.rolling_tarball.block_height }}`
+
+Block hash: `{{ site.data.rolling_tarball.block_hash }}`
+
+[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ site.data.rolling_tarball.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ site.data.rolling_tarball.block_hash }}){:target="\_blank"}
+
+Block timestamp: `{{ site.data.rolling_tarball.block_timestamp }}`
+
+Size in bytes: `{{ site.data.rolling_tarball.filesize_bytes }}`
+
+Checksum (SHA256):
+
+```
+{{ site.data.rolling_tarball.sha256 }}
+```
+
+[Artifact Metadata]({{ domain_name }}/rolling-tarball-metadata)
+
+## How to use
+
+### Archive Tarball
+
+Issue the following commands:
+
+```bash
+curl -L "{{ domain_name }}/{{ site.data.archive_tarball.filename }}" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
+
+Or simply use the permalink:
+
+```bash
+curl -L "{{ domain_name }}/archive-tarball" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
+
+### Rolling Tarball
+
+Issue the following commands:
+
+```bash
+curl -L "{{ domain_name }}/{{ site.data.rolling_tarball.filename }}" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
+
+Or simply use the permalink:
+
+```bash
+curl -L "{{ domain_name }}/rolling-tarball" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
+
+### Rolling Snapshot
+
+Issue the following commands:
+
+```bash
+wget {{ domain_name }}/{{ site.data.rolling_snapshot.filename }}
+tezos-node snapshot import {{ site.data.rolling_snapshot.filename }} --block ${BLOCK_HASH}
+```
+
+Or simply use the permalink:
+
+```bash
+wget {{ domain_name }}/rolling -O tezos-{{ site.data.tezos_metadata.network }}.rolling
+tezos-node snapshot import tezos-{{ site.data.tezos_metadata.network }}.rolling
+```
+
+### More details
+
+[About xtz-shots.io]({{ site.url }}/getting-started/).
+
+[Tezos documentation](https://tezos.gitlab.io/user/snapshots.html){:target="\_blank"}.
