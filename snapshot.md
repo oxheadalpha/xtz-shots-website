@@ -34,13 +34,19 @@ page_nav:
   {% assign tzstats_subdomain = network_substring | append: "." %}
   {% assign tzkt_subdomain = site.data.tezos_metadata.network | append: "." %}
 {% endif %}
+
+{% assign min = 100 %}
+{% assign max = 999 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+
 # Tezos snapshots for {{ site.data.tezos_metadata.network }}
 
 Octez version used for snapshotting: `{{ site.data.rolling_snapshot.tezos_version }}`
 
 ## Rolling snapshot
 
-[Download Rolling Snapshot]({{ domain_name }}/{{ site.data.rolling_snapshot.filename }})
+[Download Rolling Snapshot]({{ domain_name }}/{{ site.data.rolling_snapshot.filename }}?{{ randomNumber }})
 
 Block height: `{{ site.data.rolling_snapshot.block_height }}`
 
@@ -58,11 +64,11 @@ Checksum (SHA256):
 {{ site.data.rolling_snapshot.sha256 }}
 ```
 
-[Artifact Metadata]({{ domain_name }}/rolling-snapshot-metadata)
+[Artifact Metadata]({{ domain_name }}/rolling-snapshot-metadata?{{ randomNumber }})
 
 ## Archive tarball
 
-[Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }})
+[Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }}?{{ randomNumber }})
 
 Block height: `{{ site.data.archive_tarball.block_height }}`
 
@@ -80,11 +86,11 @@ Checksum (SHA256):
 {{ site.data.archive_tarball.sha256 }}
 ```
 
-[Artifact Metadata]({{ domain_name }}/archive-tarball-metadata)
+[Artifact Metadata]({{ domain_name }}/archive-tarball-metadata?{{ randomNumber }})
 
 ## Rolling tarball
 
-[Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }})
+[Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }}?{{ randomNumber }})
 
 Block height: `{{ site.data.rolling_tarball.block_height }}`
 
@@ -102,7 +108,7 @@ Checksum (SHA256):
 {{ site.data.rolling_tarball.sha256 }}
 ```
 
-[Artifact Metadata]({{ domain_name }}/rolling-tarball-metadata)
+[Artifact Metadata]({{ domain_name }}/rolling-tarball-metadata?{{ randomNumber }})
 
 ## How to use
 
