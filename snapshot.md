@@ -46,7 +46,7 @@ Octez version used for snapshotting: `{{ site.data.rolling_snapshot.tezos_versio
 
 ## Rolling snapshot
 
-[Download Rolling Snapshot]({{ domain_name }}/{{ site.data.rolling_snapshot.filename }}?{{ randomNumber }})
+[Download Rolling Snapshot]({{ domain_name }}/{{ site.data.rolling_snapshot.filename }})
 
 Block height: `{{ site.data.rolling_snapshot.block_height }}`
 
@@ -68,7 +68,7 @@ Checksum (SHA256):
 
 ## Archive tarball
 
-[Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }}?{{ randomNumber }})
+[Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }})
 
 Block height: `{{ site.data.archive_tarball.block_height }}`
 
@@ -90,7 +90,7 @@ Checksum (SHA256):
 
 ## Rolling tarball
 
-[Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }}?{{ randomNumber }})
+[Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }})
 
 Block height: `{{ site.data.rolling_tarball.block_height }}`
 
