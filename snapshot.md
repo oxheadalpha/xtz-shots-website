@@ -150,14 +150,14 @@ Issue the following commands:
 
 ```bash
 wget {{ domain_name }}/{{ site.data.rolling_snapshot.filename }}
-tezos-node snapshot import {{ site.data.rolling_snapshot.filename }} --block ${BLOCK_HASH}
+tezos-node snapshot import {{ site.data.rolling_snapshot.filename }} --block {{ site.data.rolling_snapshot.block_hash }}
 ```
 
 Or simply use the permalink:
 
 ```bash
 wget {{ domain_name }}/rolling -O tezos-{{ site.data.tezos_metadata.network }}.rolling
-tezos-node snapshot import tezos-{{ site.data.tezos_metadata.network }}.rolling
+tezos-node snapshot import tezos-{{ site.data.tezos_metadata.network }}.rolling --block {{ site.data.rolling_snapshot.block_hash }}
 ```
 
 ### More details
