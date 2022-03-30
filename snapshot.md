@@ -112,6 +112,22 @@ Checksum (SHA256):
 
 ## How to use
 
+### Rolling Snapshot
+
+Issue the following commands:
+
+```bash
+wget {{ domain_name }}/{{ site.data.rolling_snapshot.filename }}
+tezos-node snapshot import {{ site.data.rolling_snapshot.filename }} --block {{ site.data.rolling_snapshot.block_hash }}
+```
+
+Or simply use the permalink:
+
+```bash
+wget {{ domain_name }}/rolling -O tezos-{{ site.data.tezos_metadata.network }}.rolling
+tezos-node snapshot import tezos-{{ site.data.tezos_metadata.network }}.rolling --block {{ site.data.rolling_snapshot.block_hash }}
+```
+
 ### Archive Tarball
 
 Issue the following commands:
@@ -142,22 +158,6 @@ Or simply use the permalink:
 ```bash
 curl -L "{{ domain_name }}/rolling-tarball" \
 | lz4 -d | tar -x -C "/var/tezos"
-```
-
-### Rolling Snapshot
-
-Issue the following commands:
-
-```bash
-wget {{ domain_name }}/{{ site.data.rolling_snapshot.filename }}
-tezos-node snapshot import {{ site.data.rolling_snapshot.filename }} --block {{ site.data.rolling_snapshot.block_hash }}
-```
-
-Or simply use the permalink:
-
-```bash
-wget {{ domain_name }}/rolling -O tezos-{{ site.data.tezos_metadata.network }}.rolling
-tezos-node snapshot import tezos-{{ site.data.tezos_metadata.network }}.rolling --block {{ site.data.rolling_snapshot.block_hash }}
 ```
 
 ### More details
