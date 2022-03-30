@@ -1,0 +1,13 @@
+{
+  "block_hash": "BLF2afPXoGGvSEf6VX1tm4Gr1DZstF57ZpGS19qjUn9amdysq28",
+  "block_height": "2140965",
+  "block_timestamp": "2022-02-22T23:49:00Z",
+  "filename": "mainnet-2140965.BLAH.BLAH.rolling",
+  "filesize_bytes": "3365351291",
+  "filesize": "3G",
+  "sha256": "99320f17fd35c0bcb7ecaa05f8b26d0fadf459041c21110319c915897e4ae8f0",
+  "tezos_version": "0e7a0e9a (2021-11-15 11:05:56 +0100) (11.0)",
+  "chain_name": "mainnet",
+  "history_mode": "archive",
+  "artifact_type": "tezos-snapshot"
+}

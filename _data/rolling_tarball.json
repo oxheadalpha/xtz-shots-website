@@ -1,0 +1,13 @@
+{
+  "block_hash": "BLe2Jffs2igeKZzc3V8vvUdcZfdaXGncnjVpJXyVxm9aFfKCvgh",
+  "block_height": "2148274",
+  "block_timestamp": "2022-02-25T14:29:04Z",
+  "rolling_tarball_filename": "tezos-mainnet-rolling-tarball-2148274.lz4",
+  "sha256": "7cdcd254be0f077e282f86d393cba73bde853d6bb3e5540c823c84b847572e39",
+  "filesize_bytes": "3365351291",
+  "filesize": "3G",
+  "tezos_version": "0e7a0e9a (2021-11-15 11:05:56 +0100) (11.0)",
+  "chain_name": "mainnet",
+  "history_mode": "rolling",
+  "artifact_type": "tarball"
+}
