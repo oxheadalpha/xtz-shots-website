@@ -22,7 +22,7 @@ page_nav:
 ---
 
 {% assign network_substring = site.data.tezos_metadata.network | remove: "net" %}
-{% capture domain_name %}https://{{ site.data.tezos_metadata.network }}.xtz-shots.io{% endcapture %}
+{% capture domain_name %}https://{{ site.data.tezos_metadata.network }}.{{ site.domain_name }}{% endcapture %}
 
 {% if network_substring == "main" %}
   {% assign tzstats_subdomain = "" %}
