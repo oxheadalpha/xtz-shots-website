@@ -85,7 +85,7 @@ Snapshot import performs some safety checks to ensure that the chain state that 
 
 Please evaluate whether this is appropriate for your use case. If not, you may elect to use a snapashot or generate your own tarballs.
 
-## How to use a tarball?
+### How to use a tarball?
 
 For example to expand one of our tarballs for a **mainnet archive node** -
 
