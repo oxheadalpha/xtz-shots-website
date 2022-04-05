@@ -67,7 +67,7 @@ Rolling tarballs are generated from our rolling snapshots. We take a rolling sna
 
 Effectively, by importing a tarball instead of a snapshot, you skip the snapshot import that the node would normally do.
 
-Consequently, by importing a tarball, you can go from zero to a fully synced node in less time: cyrrently it takes about **9 minutes** to get a fully synced rolling node.
+Consequently, by importing a tarball, you can go from zero to a fully synced node in less time: currently it takes about **9 minutes** to get a fully synced rolling node.
 
 ### Archive tarballs
 
