@@ -77,7 +77,7 @@ Most Tezos users do not need an archive node. It is mostly useful for indexing t
 
 ### Internal sanity checks
 
-Before making tarballs available, we test them internally: we import them and makes sure that the node starts and RPC becomes available.
+Before making tarballs available, we test them internally: we import them and make sure that the node starts and RPC becomes available.
 
 ### Caveats
 
