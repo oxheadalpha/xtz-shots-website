@@ -57,13 +57,13 @@ All commands can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
 ## What is a tarball ?
 
-In addition to snapshot, we provide tarballs. Unlike snapshots, tarballs are **raw archives of the Tezos node storage**, in lz4 format.
+In addition to snapshot, we provide tarballs. Unlike snapshots, tarballs are **raw archives of the Tezos node data directory**, in lz4 format.
 
 We provide 2 kind of tarballs:
 
 ### Rolling tarballs
 
-Rolling tarballs are generated from our rolling snapshots. We take a rolling snapshot, import it into a node, then package its storage into a tarball.
+Rolling tarballs are generated from our rolling snapshots. We take a rolling snapshot, import it into a node, then package its data directory into a tarball.
 
 Effectively, by importing a tarball instead of a snapshot, you skip the snapshot import that the node would normally do.
 
@@ -71,7 +71,7 @@ Consequently, by importing a tarball, you can go from zero to a fully synced nod
 
 ### Archive tarballs
 
-Archive tarballs contain the full backend storage of an archive node, complete will all history of transactions since genesis. Archive snapshots do not exist, so importing a tarball is the only way of getting an archive node, short of syncing from scratch.
+Archive tarballs contain the full backend data directory of an archive node, complete will all history of transactions since genesis. Archive snapshots do not exist, so importing a tarball is the only way of getting an archive node, short of syncing from scratch.
 
 Most Tezos users do not need an archive node. It is mostly useful for indexing the entire chain.
 
