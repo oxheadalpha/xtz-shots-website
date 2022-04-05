@@ -116,7 +116,6 @@ For mainnet:
 
 * Archive tarballs **every 12 hours**
 
-
 ### Open source
 
 We are generating these artifacts in a Kubernetes environment.
