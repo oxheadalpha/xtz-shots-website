@@ -68,6 +68,8 @@ Checksum (SHA256):
 
 ## Archive tarball
 
+[What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats-)
+
 [Download Archive Tarball]({{ domain_name }}/{{ site.data.archive_tarball.filename }})
 
 Block height: `{{ site.data.archive_tarball.block_height }}`
@@ -89,6 +91,8 @@ Checksum (SHA256):
 [Artifact Metadata]({{ domain_name }}/archive-tarball-metadata?{{ randomNumber }})
 
 ## Rolling tarball
+
+[What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats-)
 
 [Download Rolling Tarball]({{ domain_name }}/{{ site.data.rolling_tarball.filename }})
 
