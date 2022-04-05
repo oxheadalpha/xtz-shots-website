@@ -45,10 +45,10 @@ Importing a Tezos snapshot performs a sanity check of its contents. Consequently
 
 We provide **permalinks**: URLs that never change and reliably point to a recent snapshot. This allows to write automation where your node may automatically download a recent snapshot at first boot.
 
-For example, to download a recent full snapshot of Tezos mainnet, simply do:
+For example, to download a recent rolling snapshot of Tezos mainnet, simply do:
 
 ```bash
-wget https://mainnet.xtz-shots.io/full
+wget https://mainnet.xtz-shots.io/rolling
 ```
 
 The run the import command.
