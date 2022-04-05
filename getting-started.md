@@ -35,7 +35,7 @@ This website helps people operating Tezos nodes to synchronize to the head of th
 
 A Tezos snapshot is a package containing Tezos chain data necessary for the node to synchronize to the network and validate blocks.
 
-In the absence of a snapshot, running a Tezos node for the first time requires syncing the historical mainnet chain from its genesis in June 2018, which takes several days. Consequently, most people spinning up new nodes use a snapshot.
+In the absence of a snapshot, running a Tezos node for the first time requires syncing the historical mainnet chain from its genesis on June 2018, which takes several days. Consequently, most people spinning up new nodes use a snapshot.
 
 Importing a Tezos snapshot performs a sanity check of its contents. Consequently, it still takes a bit of time to import a snapshot: currently up to one hour on mainnet.
 
