@@ -25,64 +25,25 @@ page_nav:
         url: 'https://xtz-shots.io/index.html'
 ---
 
-### What is this ?
+### About XTZ-Shots
 
 [Tezos](https://tezos.com) is a proof-of-stake blockchain.
 
 This website helps people operating Tezos nodes to synchronize to the head of the chain, so they are operational faster.
 
-New snapshots are uploaded twice a day. (Granada and Mainnet)
+## What is a snapshot?
 
-We're are migrating to a new snapshot system where -
+A Tezos snapshot is a package containing Tezos chain data necessary for the node to synchronize to the network and validate blocks.
 
-Hangzhounet (currently deployed)
+In the absence of a snapshot, running a Tezos node for the first time requires syncing the historical mainnet chain from its genesis in June 2018, which takes several days. Consequently, most people spinning up new nodes use a snapshot.
 
-* Rolling snapshots **every 35 minutes**
+Importing a Tezos snapshot performs a sanity check of its contents. Consequently, it still takes a bit of time to import a snapshot: currently up to one hour on mainnet.
 
-* Rolling tarballs **every 35 minutes**
-
-* Archive tarballs **every 35 minutes**
-
-Granada (planned)
-
-* Rolling snapshots **every 35 minutes**
-
-* Rolling tarballs **every 35 minutes**
-
-* Archive tarballs **every 35 minutes**
-
-Mainnet (planned)
-
-* Rolling snapshots **every 1 hour and 45 minutes**
-
-* Rolling tarballs **every 1 hour and 45 minutes**
-
-* Archive tarballs **every 12 hours**
-
-This project was sponsored by a grant from the [Tezos foundation](https://tezos.foundation/).
-
-## What is a tarball ?
-
-Tezos snapshots can take a long time to import, especially for mainnet. 
-
-However, we simply tar up `/var/node/tezos` on our rolling and archive nodes (excluding `peers.json` and `identy.json`), lz4 it, and provide it for you to download.
-
-For example- you will have a fully synced mainnet rolling node in **9 minutes**.
-
-## How to use a tarball?
-
-For example to expand one of our tarballs for an **hangzhounet archive node** -
-
-```bash
-curl -LfsS "https://d1u3sv5wkszf4p.cloudfront.net/hangzhounet-archive-tarball" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-While Tezos tarballs can help you bootstrap a fresh node faster, it does it at the expense of safety: unlike snapshot import, no sanity check is performed before starting the node. Please evaluate whether this is appropriate for your use case.
+[Read more on the Tezos documentation](https://tezos.gitlab.io/user/snapshots.html)
 
 ### How to use
 
-We are the first snapshot website to provide **permalinks**: URLs that never change and reliably point to a recent snapshot.
+We provide **permalinks**: URLs that never change and reliably point to a recent snapshot. This allows to write automation where your node may automatically downlad a recent snapshot at first boot.
 
 For example, to download a recent full snapshot of Tezos mainnet, simply do:
 
@@ -90,17 +51,77 @@ For example, to download a recent full snapshot of Tezos mainnet, simply do:
 wget https://mainnet.xtz-shots.io/full
 ```
 
-More details can be found in the [snapshot page](https://mainnet.xtz-shots.io).
+The run the import command.
+
+All commands can be found in the [snapshot page](https://mainnet.xtz-shots.io).
+
+## What is a tarball ?
+
+In addition to snapshot, we provide tarballs. Unlike snapshots, tarballs are **raw archives of the Tezos node storage**, in lz4 format.
+
+We provide 2 kind of tarballs:
+
+### Rolling tarballs
+
+Rolling tarballs are generated from our rolling snapshots. We take a rolling snapshot, import it into a node, then package its storage into a tarball.
+
+Effectively, by importing a tarball instead of a snapshot, you skip the snapshot import that the node would normally do.
+
+Consequently, by importing a tarball, you can go from zero to a fully synced node in less time: cyrrently it takes about **9 minutes** to get a fully synced rolling node.
+
+### Archive tarballs
+
+Archive tarballs contain the full backend storage of an archive node, complete will all history of transactions since genesis. Archive snapshots do not exist, so importing a tarball is the only way of getting an archive node, short of syncing from scratch.
+
+Most Tezos users do not need an archive node. It is mostly useful for indexing the entire chain.
+
+### Internal sanity checks
+
+Before making tarballs available, we test them internally: we import them and makes sure that the node starts and RPC becomes available.
+
+### Caveats
+
+Snapshot import performs some safety checks to ensure that the chain state that you are importing is consistent. In contrast, importing a tarball completely bypasses these checks. As a consequence, by importing a tarball, you entrust the tarball provider to give you the correct mainnet chain.
+
+Please evaluate whether this is appropriate for your use case. If not, you may elect to use a snpashot or generate your own tarballs.
+
+## How to use a tarball?
+
+For example to expand one of our tarballs for a **mainnet archive node** -
+
+```bash
+curl -LfsS "https://mainnet.xtz-shots.io/archive-tarball" \
+| lz4 -d | tar -x -C "/var/tezos"
+```
 
 ### Tezos node version
 
 We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
 
-### How does it work ?
+### How regularly are we creating snapshots?
 
-The snapshot generation engine is deployed on [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine).
+For testnets:
 
-All source code is [open source](https://github.com/midl-dev/tezos-snapshot-generator) so anyone can deploy a separate snapshot generator setup in the cloud.
+* Rolling snapshots **every 35 minutes**
+
+* Rolling tarballs **every 35 minutes**
+
+* Archive tarballs **every 35 minutes**
+
+For mainnet:
+
+* Rolling snapshots **every 1 hour and 45 minutes**
+
+* Rolling tarballs **every 1 hour and 45 minutes**
+
+* Archive tarballs **every 12 hours**
+
+
+### Open source
+
+We are generating these artifacts in a Kubernetes environment.
+
+The source code for the snapshot engine will be open-sourced shortly as part of the [tezos-k8s](https://github.com/oxheadalpha/tezos-k8s) Helm chart.
 
 ### Brought to you by Oxhead Alpha
 
