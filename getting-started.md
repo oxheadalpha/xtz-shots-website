@@ -37,7 +37,7 @@ A Tezos snapshot is a package containing Tezos chain data necessary for the node
 
 In the absence of a snapshot, running a Tezos node for the first time requires syncing the historical mainnet chain from its genesis on June 2018, which takes several days. Consequently, most people spinning up new nodes use a snapshot.
 
-Importing a Tezos snapshot performs a sanity check of its contents. Consequently, it still takes a bit of time to import a snapshot: currently up to one hour on mainnet.
+Importing a Tezos snapshot performs a sanity check of its contents. Consequently, it still takes a bit of time to import a snapshot- currently up to one hour on mainnet.
 
 [Read more on the Tezos documentation](https://tezos.gitlab.io/user/snapshots.html)
 
