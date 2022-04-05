@@ -83,7 +83,7 @@ Before making tarballs available, we test them internally: we import them and ma
 
 Snapshot import performs some safety checks to ensure that the chain state that you are importing is consistent. In contrast, importing a tarball completely bypasses these checks. As a consequence, by importing a tarball, you entrust the tarball provider to give you the correct mainnet chain.
 
-Please evaluate whether this is appropriate for your use case. If not, you may elect to use a snapashot or generate your own tarballs.
+Please evaluate whether this is appropriate for your use case. If not, you may elect to use a snapshot or generate your own tarballs.
 
 ### How to use a tarball?
 
@@ -92,6 +92,22 @@ For example to expand one of our tarballs for a **mainnet archive node** -
 ```bash
 curl -LfsS "https://mainnet.xtz-shots.io/archive-tarball" \
 | lz4 -d | tar -x -C "/var/tezos"
+```
+
+## XTZ-Shots artifacts
+
+### Metadata
+
+The XTZ-Shots platform provides metadata for programmatic interaction with the service.
+
+You can query the metadata permalinks to gather all information (including chain, level, size and shasum) for the most recent artifacts available on the platform.
+
+Here are examples on how to retrieve metadata for mainnet artifacts:
+
+```bash
+curl -L https://mainnet.xtz-shots.io/rolling-metadata
+curl -L https://mainnet.xtz-shots.io/rolling-tarball-metadata
+curl -L https://mainnet.xtz-shots.io/archive-tarball-metadata
 ```
 
 ### Tezos node version
