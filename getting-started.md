@@ -94,6 +94,22 @@ curl -LfsS "https://mainnet.xtz-shots.io/archive-tarball" \
 | lz4 -d | tar -x -C "/var/tezos"
 ```
 
+## XTZ-Shots artifacts
+
+### Metadata
+
+The XTZ-Shots platform provides metadata for programmatic interaction with the service.
+
+You can query the metadata permalinks to gather all information (including chain, level, size and shasum) for the most recent artifacts available on the platform.
+
+Here are examples on how to retrieve metadata for mainnet artifacts:
+
+```
+curl -L https://mainnet.xtz-shots.io/rolling-metadata
+curl -L https://mainnet.xtz-shots.io/rolling-tarball-metadata
+curl -L https://mainnet.xtz-shots.io/archive-tarball-metadata
+```
+
 ### Tezos node version
 
 We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
