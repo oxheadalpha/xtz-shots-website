@@ -43,7 +43,7 @@ Importing a Tezos snapshot performs a sanity check of its contents. Consequently
 
 ### How to use
 
-We provide **permalinks**: URLs that never change and reliably point to a recent snapshot. This allows to write automation where your node may automatically downlad a recent snapshot at first boot.
+We provide **permalinks**: URLs that never change and reliably point to a recent snapshot. This allows to write automation where your node may automatically download a recent snapshot at first boot.
 
 For example, to download a recent full snapshot of Tezos mainnet, simply do:
 
