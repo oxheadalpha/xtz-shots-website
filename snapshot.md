@@ -56,7 +56,7 @@ Block hash: `{{ site.data.rolling_snapshot.block_hash }}`
 
 Block timestamp: `{{ site.data.rolling_snapshot.block_timestamp }}`
 
-Size in bytes: `{{ site.data.rolling_snapshot.filesize_bytes }}`
+File Size: `{{ site.data.rolling_snapshot.filesize }}`
 
 Checksum (SHA256):
 
@@ -80,7 +80,7 @@ Block hash: `{{ site.data.archive_tarball.block_hash }}`
 
 Block timestamp: `{{ site.data.archive_tarball.block_timestamp }}`
 
-Size in bytes: `{{ site.data.archive_tarball.filesize_bytes }}`
+File Size: `{{ site.data.rolling_snapshot.filesize }}`
 
 Checksum (SHA256):
 
@@ -104,7 +104,7 @@ Block hash: `{{ site.data.rolling_tarball.block_hash }}`
 
 Block timestamp: `{{ site.data.rolling_tarball.block_timestamp }}`
 
-Size in bytes: `{{ site.data.rolling_tarball.filesize_bytes }}`
+File Size: `{{ site.data.rolling_snapshot.filesize }}`
 
 Checksum (SHA256):
 
