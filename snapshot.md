@@ -80,7 +80,7 @@ Block hash: `{{ site.data.archive_tarball.block_hash }}`
 
 Block timestamp: `{{ site.data.archive_tarball.block_timestamp }}`
 
-File Size: `{{ site.data.rolling_snapshot.filesize }}`
+File Size: `{{ site.data.archive_tarball.filesize }}`
 
 Checksum (SHA256):
 
@@ -104,7 +104,7 @@ Block hash: `{{ site.data.rolling_tarball.block_hash }}`
 
 Block timestamp: `{{ site.data.rolling_tarball.block_timestamp }}`
 
-File Size: `{{ site.data.rolling_snapshot.filesize }}`
+File Size: `{{ site.data.rolling_tarball.filesize }}`
 
 Checksum (SHA256):
 
