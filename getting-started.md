@@ -105,7 +105,7 @@ You can query the metadata permalinks to gather all information (including chain
 Here are examples on how to retrieve metadata for mainnet artifacts:
 
 ```bash
-curl -L https://mainnet.xtz-shots.io/rolling-metadata
+curl -L https://mainnet.xtz-shots.io/rolling-snapshot-metadata
 curl -L https://mainnet.xtz-shots.io/rolling-tarball-metadata
 curl -L https://mainnet.xtz-shots.io/archive-tarball-metadata
 ```
