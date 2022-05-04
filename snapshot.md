@@ -27,9 +27,6 @@ page_nav:
 {% if network_substring == "main" %}
   {% assign tzstats_subdomain = "" %}
   {% assign tzkt_subdomain = "" %}
-{% elsif network_substring == "hangzhou" %}
-  {% assign tzstats_subdomain = network_substring | append: "." %}
-  {% assign tzkt_subdomain = "hangzhou2net" | append: "." %}
 {% else %}
   {% assign tzstats_subdomain = network_substring | append: "." %}
   {% assign tzkt_subdomain = site.data.tezos_metadata.network | append: "." %}

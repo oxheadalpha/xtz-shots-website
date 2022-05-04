@@ -22,8 +22,6 @@ doks:
         item_url: "https://mainnet.xtz-shots.io/"
       - item_name: Ithacanet
         item_url: "https://ithacanet.xtz-shots.io/"
-      - item_name: Hangzhounet
-        item_url: "https://hangzhounet.xtz-shots.io/"
 
   footer:
     content:
