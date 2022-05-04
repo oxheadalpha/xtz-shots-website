@@ -30,7 +30,7 @@ doks:
       logo:
         text: XTZ-Shots
         image:
-      copyright: Copyright &copy; 2021. - Oxhead Alpha <br>All rights reserved.
+      copyright: Copyright &copy; 2022. - Oxhead Alpha <br>All rights reserved.
     social_list:
       - network_name: github
         profile_url: "https://github.com/oxheadalpha"
