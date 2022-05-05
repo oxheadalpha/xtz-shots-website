@@ -136,7 +136,7 @@ For mainnet:
 
 We are generating these artifacts in a Kubernetes environment.
 
-The source code for the snapshot engine will be open-sourced shortly as part of the [tezos-k8s](https://github.com/oxheadalpha/tezos-k8s) Helm chart.
+The snapshot engine can be deployed as a [tezos-k8s](https://github.com/oxheadalpha/tezos-k8s/charts/snapshotEngine) Helm chart.
 
 ### Brought to you by Oxhead Alpha
 
