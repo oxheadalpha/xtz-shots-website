@@ -32,4 +32,8 @@ grid_navigation:
       excerpt: Snapshots for Ithacanet, test chain for the Ithaca protocol.
       cta: Download
       url: 'https://ithacanet.xtz-shots.io/'
+    - title: Jakartanet
+      excerpt: Snapshots for Jakartanet, test chain for the Jakarta protocol.
+      cta: Download
+      url: 'https://jakartanet.xtz-shots.io/'
 ---
