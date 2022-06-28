@@ -29,7 +29,7 @@ grid_navigation:
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
     - title: Ghostnet
-      excerpt: snapshots for Ghostnet, the long-running Tezos testnet
+      excerpt: Snapshots for Ghostnet, the long-running Tezos testnet
       cta: Download
       url: 'https://ithacanet.xtz-shots.io/'
     - title: Jakartanet
