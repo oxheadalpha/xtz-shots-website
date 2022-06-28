@@ -28,8 +28,8 @@ grid_navigation:
       excerpt: Snapshots for the Tezos blockchain (you probably want this).
       cta: Download
       url: 'https://mainnet.xtz-shots.io/'
-    - title: Ithacanet
-      excerpt: Snapshots for Ithacanet, test chain for the Ithaca protocol.
+    - title: Ghostnet
+      excerpt: snapshots for Ghostnet, the long-running Tezos testnet
       cta: Download
       url: 'https://ithacanet.xtz-shots.io/'
     - title: Jakartanet

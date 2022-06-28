@@ -20,7 +20,7 @@ doks:
     nav:
       - item_name: Mainnet
         item_url: "https://mainnet.xtz-shots.io/"
-      - item_name: Ithacanet
+      - item_name: Ghostnet
         item_url: "https://ithacanet.xtz-shots.io/"
 
   footer:
