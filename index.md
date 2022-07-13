@@ -31,7 +31,7 @@ grid_navigation:
     - title: Ghostnet
       excerpt: Snapshots for Ghostnet, the long-running Tezos testnet
       cta: Download
-      url: 'https://ithacanet.xtz-shots.io/'
+      url: 'https://ghostnet.xtz-shots.io/'
     - title: Jakartanet
       excerpt: Snapshots for Jakartanet, test chain for the Jakarta protocol.
       cta: Download
