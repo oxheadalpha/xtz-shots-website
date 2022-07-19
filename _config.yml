@@ -21,7 +21,9 @@ doks:
       - item_name: Mainnet
         item_url: "https://mainnet.xtz-shots.io/"
       - item_name: Ghostnet
-        item_url: "https://ithacanet.xtz-shots.io/"
+        item_url: "https://ghostnet.xtz-shots.io/"
+      - item_name: Jakartanet
+        item_url: "https://jakartanet.xtz-shots.io/"
 
   footer:
     content:
