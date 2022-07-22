@@ -17,13 +17,6 @@ doks:
       text: XTZ-Shots
       image:
       logo_url: "https://xtz-shots.io"
-    nav:
-      - item_name: Mainnet
-        item_url: "https://mainnet.xtz-shots.io/"
-      - item_name: Ghostnet
-        item_url: "https://ghostnet.xtz-shots.io/"
-      - item_name: Jakartanet
-        item_url: "https://jakartanet.xtz-shots.io/"
 
   footer:
     content:
@@ -51,5 +44,17 @@ sass:
 # Jekyll settings
 layouts_dir: ./_layouts
 includes_dir: ./_includes
-exclude: ["README.md", "CHANGELOG.md"]
+exclude: ["README.md", "CHANGELOG.md", "bundle/"]
 permalink: /:title/
+
+plugins:
+  - jekyll-datapage-generator
+
+page_gen-dirs: true
+page_gen:
+- data: snapshot_jekyll_data.latest_snapshots
+  template: latest_snapshots
+  debug: true
+  name: "name"
+  dir: "latest"
+  extension: "md"
