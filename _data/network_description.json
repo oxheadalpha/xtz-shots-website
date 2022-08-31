@@ -1,0 +1,18 @@
+{
+  "mainnet": {
+    "human_name": "Mainnet",
+    "description": "Snapshots for the Tezos blockchain (you probably want this)."
+  },
+  "ghostnet": {
+    "human_name": "Ghostnet",
+    "description": "Snapshots for Ghostnet, the long-running Tezos testnet."
+  },
+  "jakartanet": {
+    "human_name": "Jakartanet",
+    "description": "Snapshots for Jakartanet, the test chain for the Jakarta protocol."
+  },
+  "kathmandunet": {
+    "human_name": "Kathmandunet",
+    "description": "Snapshots for Kathmandunet, the test chain for the Kathmandu protocol."
+  }
+}

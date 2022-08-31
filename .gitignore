@@ -5,3 +5,4 @@ vendor
 .jekyll-cache
 .DS_Store
 !assets/js/vendor
+_data/snapshot_jekyll_data.json
