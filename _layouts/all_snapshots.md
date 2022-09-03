@@ -38,131 +38,37 @@ page_nav:
 {% assign diff = max | minus: min %}
 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
 
-# Tezos snapshots for {{ page.latest_snapshots.rolling.chain_name }}
+# All Tezos Snapshots for {{ page.snapshots.rolling[0].chain_name }}
 
-Octez version used for snapshotting: `{{ page.latest_snapshots.rolling.tezos_version }}`
+## Rolling Snapshots
 
-## Rolling snapshot
+| Filename | Date | Size | Octez version | |
+| -- | -- | -- | -- |
+{% for s in page.snapshots.rolling -%}
+{% assign vv = s.tezos_version | split: '(' -%}
+{% assign v = vv[2] | split: ')' -%}
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+{% endfor %}
 
-[Download Rolling Snapshot]({{ domain_name }}/{{ page.latest_snapshots.rolling.filename }})
+## Rolling Tarballs
 
-Block height: `{{ page.latest_snapshots.rolling.block_height }}`
+| Filename | Date | Size | Octez version | |
+| -- | -- | -- | -- |
+{% for s in page.snapshots.rolling-tarball -%}
+{% assign vv = s.tezos_version | split: '(' -%}
+{% assign v = vv[2] | split: ')' -%}
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+{% endfor %}
 
-Block hash: `{{ page.latest_snapshots.rolling.block_hash }}`
+## Archive Tarballs
 
-[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ page.latest_snapshots.rolling.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ page.latest_snapshots.rolling.block_hash }}){:target="\_blank"}
-
-Block timestamp: `{{ page.latest_snapshots.rolling.block_timestamp }}`
-
-File Size: `{{ page.latest_snapshots.rolling.filesize }}`
-
-Checksum (SHA256):
-
-```
-{{ page.latest_snapshots.rolling.sha256 }}
-```
-
-[Artifact Metadata]({{ domain_name }}/rolling-snapshot-metadata?{{ randomNumber }})
-
-## Archive tarball
-
-[What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
-
-[Download Archive Tarball]({{ domain_name }}/{{ page.latest_snapshots.archive-tarball.filename }})
-
-Block height: `{{ page.latest_snapshots.archive-tarball.block_height }}`
-
-Block hash: `{{ page.latest_snapshots.archive-tarball.block_hash }}`
-
-[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ page.latest_snapshots.archive-tarball.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ page.latest_snapshots.archive-tarball.block_hash }}){:target="\_blank"}
-
-Block timestamp: `{{ page.latest_snapshots.archive-tarball.block_timestamp }}`
-
-File Size: `{{ page.latest_snapshots.archive-tarball.filesize }}`
-
-Checksum (SHA256):
-
-```
-{{ page.latest_snapshots.archive-tarball.sha256 }}
-```
-
-[Artifact Metadata]({{ domain_name }}/archive-tarball-metadata?{{ randomNumber }})
-
-## Rolling tarball
-
-[What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
-
-[Download Rolling Tarball]({{ domain_name }}/{{ page.latest_snapshots.rolling-tarball.filename }})
-
-Block height: `{{ page.latest_snapshots.rolling-tarball.block_height }}`
-
-Block hash: `{{ page.latest_snapshots.rolling-tarball.block_hash }}`
-
-[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ page.latest_snapshots.rolling-tarball.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ page.latest_snapshots.rolling-tarball.block_hash }}){:target="\_blank"}
-
-Block timestamp: `{{ page.latest_snapshots.rolling-tarball.block_timestamp }}`
-
-File Size: `{{ page.latest_snapshots.rolling-tarball.filesize }}`
-
-Checksum (SHA256):
-
-```
-{{ page.latest_snapshots.rolling-tarball.sha256 }}
-```
-
-[Artifact Metadata]({{ domain_name }}/rolling-tarball-metadata?{{ randomNumber }})
-
-## How to use
-
-### Rolling Snapshot
-
-Issue the following commands:
-
-```bash
-wget {{ domain_name }}/{{ page.latest_snapshots.rolling.filename }}
-tezos-node snapshot import {{ page.latest_snapshots.rolling.filename }} --block {{ page.latest_snapshots.rolling.block_hash }}
-```
-
-Or simply use the permalink:
-
-```bash
-wget {{ domain_name }}/rolling -O tezos-{{ page.latest_snapshots.rolling.chain_name }}.rolling
-tezos-node snapshot import tezos-{{ page.latest_snapshots.rolling.chain_name }}.rolling --block {{ page.latest_snapshots.rolling.block_hash }}
-```
-
-### Archive Tarball
-
-Issue the following commands:
-
-```bash
-curl -L "{{ domain_name }}/{{ page.latest_snapshots.archive-tarball.filename }}" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-Or simply use the permalink:
-
-```bash
-curl -L "{{ domain_name }}/archive-tarball" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-### Rolling Tarball
-
-Issue the following commands:
-
-```bash
-curl -L "{{ domain_name }}/{{ page.latest_snapshots.rolling-tarball.filename }}" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-Or simply use the permalink:
-
-```bash
-curl -L "{{ domain_name }}/rolling-tarball" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-### More details
+| Filename | Date | Size | Octez version | |
+| -- | -- | -- | -- |
+{% for s in page.snapshots.archive-tarball -%}
+{% assign vv = s.tezos_version | split: '(' -%}
+{% assign v = vv[2] | split: ')' -%}
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+{% endfor %}
 
 [About xtz-shots.io]({{ site.url }}/getting-started/).
 
