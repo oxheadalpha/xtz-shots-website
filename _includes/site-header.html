@@ -25,7 +25,7 @@
         {% endif %}
         <ul class="site-header__nav hidden-xs">
           {% for item in all_networks %}
-          <li><a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.name }}">{{
+          <li><a href="/{{ item.name }}">{{
               item.name }}</a></li>
           {% endfor %}
         </ul><!-- /.site-header__nav -->
