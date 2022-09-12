@@ -73,27 +73,36 @@
             <div class="row">
               {% for item in all_networks %}
               <div class="col-sm-6 col-lg-4">
-                <a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.name }}"
-                  class="nav-grid__item">
+                <div class="nav-grid__item">
                   <div class="nav-grid__content" data-mh>
-                    <h2 class="nav-grid__title">
-                      {% if site.data.network_description contains item.name %}
-                      {{ site.data.network_description[item.name].human_name }}
-                      {% else %}
-                      {{ item.name }}
-                      {% endif %}
-                    </h2>
-                    <p>
-                      {% if site.data.network_description contains item.name %}
-                      {{ site.data.network_description[item.name].description }}
-                      {% endif %}
-                    </p>
+                    <a
+                      href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.name }}">
+                      <h2 class="nav-grid__title">
+                        {% if site.data.network_description contains item.name %}
+                        {{ site.data.network_description[item.name].human_name }}
+                        {% else %}
+                        {{ item.name }}
+                        {% endif %}
+                      </h2>
+                      <p>
+                        {% if site.data.network_description contains item.name %}
+                        {{ site.data.network_description[item.name].description }}
+                        {% endif %}
+                      </p>
                   </div><!-- /.nav-grid__content -->
                   <p class="nav-grid__btn">
-                    Download
+                    Download Most Recent
                     <i class="icon icon--arrow-right"></i>
                   </p>
-                </a><!-- /.nav-grid__item -->
+                  </a>
+                  <a
+                    href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.name }}/list.html">
+                    <p class="nav-grid__btn">
+                      Browse All
+                      <i class="icon icon--arrow-right"></i>
+                    </p>
+                  </a>
+                </div><!-- /.nav-grid__item -->
               </div><!-- /.col -->
               {% endfor %}
             </div><!-- /.row -->

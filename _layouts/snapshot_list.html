@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include site-head.html %}
+</head>
+
+<body class="{{ site.doks.color_theme }}" data-spy="scroll" data-target=".js-scrollspy">
+  {% include site-header.html %}
+  <div class="section">
+    <div class="container" style="padding-top: 2rem;">
+      <div class="row">
+        <div class="content">
+          {{ content }}
+        </div><!-- /.content -->
+        <div class="col-md-4 col-md-offset-1">
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.section -->
+  <div class="js-footer-area">
+    {% if page.micro_nav == true %}
+    {% include micro-nav.html %}
+    {% endif %}
+    {% include site-footer.html %}
+  </div><!-- /.js-footer-area -->
+</body>
+
+</html>

@@ -58,3 +58,9 @@ page_gen:
   name: "name"
   dir: "latest"
   extension: "md"
+- data: snapshot_jekyll_data.all_snapshots
+  template: all_snapshots
+  debug: true
+  name: "name"
+  dir: "all"
+  extension: "md"
