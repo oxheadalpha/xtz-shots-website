@@ -23,7 +23,7 @@ page_nav:
 ---
 
 {% assign network_substring = page.latest_snapshots.rolling.chain_name | remove: "net" %}
-{% capture domain_name %}https://{{ page.latest_snapshots.rolling.chain_name }}.{{ site.domain_name }}{% endcapture %}
+{% capture domain_name %}https://xtz-shots.io/{{ page.latest_snapshots.rolling.chain_name }}{% endcapture %}
 
 {% if network_substring == "main" %}
   {% assign tzstats_subdomain = "" %}
@@ -68,6 +68,7 @@ Checksum (SHA256):
 
 [What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
 
+{% if page.latest_snapshots.archive-tarball.url %}
 [Download Archive Tarball]({{ page.latest_snapshots.archive-tarball.url }})
 
 Block height: `{{ page.latest_snapshots.archive-tarball.block_height }}`
@@ -87,6 +88,9 @@ Checksum (SHA256):
 ```
 
 [Artifact Metadata]({{ page.latest_snapshots.archive-tarball.url }}.json)
+{% else %}
+Uh oh! No archive tarball for Tezos build `{{ page.latest_snapshots.rolling.tezos_version }}` yet. Looks like we still need some more time. Check out https://xtz-shots.io/`{{ page.latest_snapshots.rolling.chain_name }}`/list.html for older artifacts.
+{% endif %}
 
 ## Rolling tarball
 

@@ -5,7 +5,7 @@ keywords:
 
 # Hero section
 title: XTZ-Shots
-description: A repository of Tezos snapshots - regularly updated and fast to download from anywhere in the world.
+description: A repository of Tezos snapshots - regularly updated and fast to download from anywhere in the world.<br><br>This list of snapshots and tarballs is also available in <a href="https://xtz-shots.io/tezos-snapshots.json" target="_blank">json format</a>.
 buttons:
     - content: Learn more
       url: '/getting-started'
