@@ -23,7 +23,7 @@ page_nav:
 ---
 
 {% assign network_substring = page.latest_snapshots.rolling.chain_name | remove: "net" %}
-{% capture domain_name %}https://xtz-shots.io/{{ page.latest_snapshots.rolling.chain_name }}{% endcapture %}
+{% capture domain_name %}https://{{ page.latest_snapshots.rolling.chain_name }}.{{ site.domain_name }}{% endcapture %}
 
 {% if network_substring == "main" %}
   {% assign tzstats_subdomain = "" %}
