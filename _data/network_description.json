@@ -14,5 +14,9 @@
   "kathmandunet": {
     "human_name": "Kathmandunet",
     "description": "Snapshots for Kathmandunet, the test chain for the Kathmandu protocol."
+  },
+  "limanet": {
+    "human_name": "Limanet",
+    "description": "Snapshots for Limanet, the test chain for the Lima protocol."
   }
 }
