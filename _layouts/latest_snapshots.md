@@ -36,7 +36,7 @@ page_nav:
 
 Octez version used for snapshotting: `{{ page.latest_snapshots.rolling.tezos_version }}`
 
-[Browse older snapshots](/{{page.latest_snapshots.rolling.chain_name}}/list).
+[Browse older snapshots](/{{page.latest_snapshots.rolling.chain_name}}/list.html).
 
 ## Rolling snapshot
 
