@@ -18,7 +18,7 @@ buttons:
 # Author box
 author:
     title: Brought to you by Oxhead Alpha
-    title_url: 'https://oxheadalpha.com'
+    title_url: 'https://www.oxheadalpha.com'
     external_url: true
-    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://oxheadalpha.com" target="_blank">Learn more</a>.
+    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://www.oxheadalpha.com" target="_blank">Learn more</a>.
 ---
