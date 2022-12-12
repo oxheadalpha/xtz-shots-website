@@ -7,12 +7,6 @@ comments: false
 # Hero section
 title: Tezos snapshots for AWSPRPRPPRRP
 description:
-# Author box
-author:
-  title: Brought to you by Oxhead Alpha
-  title_url: "https://medium.com/the-aleph"
-  external_url: true
-  description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 # Micro navigation
 micro_nav: true
 # Page navigation
@@ -39,6 +33,10 @@ page_nav:
 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
 
 # All Tezos Snapshots for {{ page.snapshots.rolling[0].chain_name }}
+
+The full list of snapshots is also available as a metadata file:
+* [Download metadata file](https://xtz-shots.io/tezos-snapshots.json)
+* [Read more about metadata](/getting-started/#xtz-shots-metadata)
 
 ## Rolling Snapshots
 

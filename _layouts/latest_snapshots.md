@@ -1,18 +1,12 @@
 ---
 # Page settings
-layout: snapshot
+layout: snapshot_list
 permalink: {{ page.permalink }}
 keywords:
 comments: false
 # Hero section
 title: Tezos snapshots for AWSPRPRPPRRP
 description:
-# Author box
-author:
-  title: Brought to you by Oxhead Alpha
-  title_url: "https://medium.com/the-aleph"
-  external_url: true
-  description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
 # Micro navigation
 micro_nav: true
 # Page navigation
@@ -38,9 +32,11 @@ page_nav:
 {% assign diff = max | minus: min %}
 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
 
-# Tezos snapshots for {{ page.latest_snapshots.rolling.chain_name }}
+# Most recent snapshots for {{ page.latest_snapshots.rolling.chain_name }}
 
 Octez version used for snapshotting: `{{ page.latest_snapshots.rolling.tezos_version }}`
+
+[Browse older snapshots](/{{page.latest_snapshots.rolling.chain_name}}/list).
 
 ## Rolling snapshot
 

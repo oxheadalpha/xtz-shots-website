@@ -1,5 +1,10 @@
 title: Tezos Snapshots
-author: Oxhead Alpha
+author:
+    title: Brought to you by Oxhead Alpha
+    title_url: 'https://oxheadalpha.com'
+    external_url: true
+    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://oxheadalpha.com" target="_blank">Learn more</a>.
+
 description: > # this means to ignore newlines until "show_excerpts:"
   Tezos Snapshots
 favicon: "./favicon.ico" # set the favicon of the site
@@ -23,7 +28,7 @@ doks:
       logo:
         text: XTZ-Shots
         image:
-      copyright: Copyright &copy; 2022. - Oxhead Alpha <br>All rights reserved.
+      copyright: Copyright &copy; 2023. - Oxhead Alpha <br>All rights reserved.
     social_list:
       - network_name: github
         profile_url: "https://github.com/oxheadalpha"

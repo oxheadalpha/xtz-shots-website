@@ -11,9 +11,9 @@ description:
 # Author box
 author:
     title: Brought to you by Oxhead Alpha
-    title_url: 'https://medium.com/the-aleph'
+    title_url: 'https://oxheadalpha.com'
     external_url: true
-    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://medium.com/the-aleph" target="_blank">Learn more</a>.
+    description: A Tezos core development company, providing common goods for the Tezos ecosystem. <a href="https://oxheadalpha.com" target="_blank">Learn more</a>.
 
 # Micro navigation
 micro_nav: true
@@ -55,6 +55,10 @@ The run the import command.
 
 All commands can be found in the [snapshot page](https://mainnet.xtz-shots.io).
 
+### Tezos node version
+
+We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
+
 ## What is a tarball ?
 
 In addition to snapshot, we provide tarballs. Unlike snapshots, tarballs are **raw archives of the Tezos node data directory**, in lz4 format.
@@ -94,15 +98,33 @@ curl -LfsS "https://mainnet.xtz-shots.io/archive-tarball" \
 | lz4 -d | tar -x -C "/var/tezos"
 ```
 
-## XTZ-Shots artifacts
 
-### Metadata
+## XTZ-Shots Metadata
 
 The XTZ-Shots platform provides metadata for programmatic interaction with the service.
 
-You can query the metadata permalinks to gather all information (including chain, level, size and shasum) for the most recent artifacts available on the platform.
+Query a json-formatted list of all artifacts available on the platform:
 
-Here are examples on how to retrieve metadata for mainnet artifacts:
+```
+curl https://xtz-shots.io/tezos-snapshots.json
+```
+
+Using the `jq` command-line tool, you can filter through the snapshots to find the one you need.
+
+Example:
+
+```
+# Find the most recent mainnet rolling tarball built with Octez v15:
+curl -s https://xtz-shots.io/tezos-snapshots.json | jq '[
+  .[] | select(.chain_name == "mainnet") |
+  select(.artifact_type == "tarball") |
+  select(.history_mode == "rolling") |
+  select(.tezos_version | contains("(15"))
+  ] | sort_by(.block_height)
+  [-1]'
+```
+
+We also provide **metadata permalinks** to gather all information for the most recent artifacts available on the platform.
 
 ```bash
 curl -L https://mainnet.xtz-shots.io/rolling-snapshot-metadata
@@ -110,27 +132,8 @@ curl -L https://mainnet.xtz-shots.io/rolling-tarball-metadata
 curl -L https://mainnet.xtz-shots.io/archive-tarball-metadata
 ```
 
-### Tezos node version
 
-We display the Tezos node version used for snapshot generation. For best results, use the same version to import your snapshot. The snapshot format may have changed.
-
-### How regularly are we creating snapshots?
-
-For testnets:
-
-* Rolling snapshots **every 35 minutes**
-
-* Rolling tarballs **every 35 minutes**
-
-* Archive tarballs **every 35 minutes**
-
-For mainnet:
-
-* Rolling snapshots **every 1 hour and 45 minutes**
-
-* Rolling tarballs **every 1 hour and 45 minutes**
-
-* Archive tarballs **every 12 hours**
+## XTZ-Shots artifacts
 
 ### Open source
 
@@ -143,12 +146,6 @@ The snapshot engine can be deployed as a [tezos-k8s](https://github.com/oxheadal
 We are [Oxhead Alpha](https://www.oxheadalpha.com/), a blockchain infrastructure company.
 
 We maintain a [series of open source infrastructure projects](https://github.com/oxheadalpha) to further the tezos ecosystem of open-source software projects to deploy secure bakers and nodes.
-
-Contact us if you need help with:
-
-* becoming a validator
-* deploying your private chain based on Tezos
-* generating snapshots for your private chain
 
 ### Disclaimers
 
