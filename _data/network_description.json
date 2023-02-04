@@ -11,8 +11,8 @@
     "human_name": "Limanet",
     "description": "Snapshots for Limanet, the test chain for the Lima protocol."
   },
-    "mumbainet": {
+  "mumbainet": {
     "human_name": "Mumbainet",
-    "description": "Snapshots for Mumbainet, the test chain for the Lima protocol."
+    "description": "Snapshots for Mumbainet, the test chain for the Mumbai protocol."
   }
 }
