@@ -43,9 +43,7 @@ The full list of snapshots is also available as a metadata file:
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
 {% for s in page.snapshots.rolling -%}
-{% assign vv = s.tezos_version | split: '(' -%}
-{% assign v = vv[2] | split: ')' -%}
-| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `v{{ s.tezos_version.version.major }}.{{ s.tezos_version.version.minor }} {{ s.version.additional_info }} ` | [⬇️]({{ s.url}}) |
 {% endfor %}
 
 ## Rolling Tarballs
@@ -53,9 +51,7 @@ The full list of snapshots is also available as a metadata file:
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
 {% for s in page.snapshots.rolling-tarball -%}
-{% assign vv = s.tezos_version | split: '(' -%}
-{% assign v = vv[2] | split: ')' -%}
-| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `v{{ s.tezos_version.version.major }}.{{ s.tezos_version.version.minor }} {{ s.version.additional_info }} ` | [⬇️]({{ s.url}}) |
 {% endfor %}
 
 ## Archive Tarballs
@@ -63,9 +59,7 @@ The full list of snapshots is also available as a metadata file:
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
 {% for s in page.snapshots.archive-tarball -%}
-{% assign vv = s.tezos_version | split: '(' -%}
-{% assign v = vv[2] | split: ')' -%}
-| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ v[0]}}` | [⬇️]({{ s.url}}) |
+| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `v{{ s.tezos_version.version.major }}.{{ s.tezos_version.version.minor }} {{ s.version.additional_info }} ` | [⬇️]({{ s.url}}) |
 {% endfor %}
 
 [About xtz-shots.io]({{ site.url }}/getting-started/).

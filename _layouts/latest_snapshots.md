@@ -34,7 +34,7 @@ page_nav:
 
 # Most recent snapshots for {{ page.latest_snapshots.rolling.chain_name }}
 
-Octez version used for snapshotting: `{{ page.latest_snapshots.rolling.tezos_version }}`
+Octez version used for snapshotting: `v{{ page.latest_snapshots.rolling.tezos_version.version.major }}.{{ page.latest_snapshots.rolling.tezos_version.version.minor }} {{ page.latest_snapshots.rolling.tezos_version.version.additional_info }} `
 
 [Browse older snapshots](/{{page.latest_snapshots.rolling.chain_name}}/list.html).
 
