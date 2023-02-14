@@ -34,7 +34,19 @@ page_nav:
 
 # Most recent snapshots for {{ page.latest_snapshots.rolling.chain_name }}
 
-Octez version used for snapshotting: `v{{ page.latest_snapshots.rolling.tezos_version.version.major }}.{{ page.latest_snapshots.rolling.tezos_version.version.minor }} {{ page.latest_snapshots.rolling.tezos_version.version.additional_info }} `
+{% assign version = page.latest_snapshots.rolling.tezos_version.version %}
+{% assign major_version = version.major %}
+{% assign minor_version = version.minor %}
+{% assign additional_info = page.latest_snapshots.rolling.tezos_version.version.additional_info %}
+
+{% if additional_info == "release" %}
+  {% capture version %}v{{ major_version }}.{{ minor_version }}{% endcapture %}
+{% else %}
+  {% assign rc = additional_info.rc %}
+  {% capture version %}v{{ major_version }}.{{ minor_version }} rc~{{ rc }}{% endcapture %}
+{% endif %}
+
+Octez version used for snapshotting: `{{ version }}`
 
 [Browse older snapshots](/{{page.latest_snapshots.rolling.chain_name}}/list.html).
 
