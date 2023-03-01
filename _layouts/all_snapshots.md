@@ -81,7 +81,7 @@ The full list of snapshots is also available as a metadata file:
 
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
-{% for s in page.snapshots.archive-tarball -%}
+{% for s in sorted-%}
 {%- assign version = s.tezos_version.version -%}
 {%- assign major_version = version.major -%}
 {%- assign minor_version = version.minor -%}
