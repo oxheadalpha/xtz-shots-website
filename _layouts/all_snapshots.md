@@ -39,10 +39,11 @@ The full list of snapshots is also available as a metadata file:
 * [Read more about metadata](/getting-started/#xtz-shots-metadata)
 
 ## Rolling Snapshots
+{% assign sorted = page.snapshots.rolling | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
-{% for s in page.snapshots.rolling %}
+{% for s in sorted %}
 {%- assign version = s.tezos_version.version -%}
 {%- assign major_version = version.major -%}
 {%- assign minor_version = version.minor -%}
@@ -57,10 +58,11 @@ The full list of snapshots is also available as a metadata file:
 {% endfor %}
 
 ## Rolling Tarballs
+{% assign sorted = page.snapshots.rolling-tarball | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
-{% for s in page.snapshots.rolling-tarball -%}
+{% for s in sorted -%}
 {%- assign version = s.tezos_version.version -%}
 {%- assign major_version = version.major -%}
 {%- assign minor_version = version.minor -%}
@@ -75,6 +77,7 @@ The full list of snapshots is also available as a metadata file:
 {% endfor %}
 
 ## Archive Tarballs
+{% assign sorted = page.snapshots.rolling-tarball | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
