@@ -77,7 +77,7 @@ The full list of snapshots is also available as a metadata file:
 {% endfor %}
 
 ## Archive Tarballs
-{% assign sorted = page.snapshots.rolling-tarball | sort: 'block_timestamp' | reverse %}
+{% assign sorted = page.snapshots.archive-tarball | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
 | -- | -- | -- | -- |
