@@ -39,6 +39,8 @@ The full list of snapshots is also available as a metadata file:
 * [Read more about metadata](/getting-started/#xtz-shots-metadata)
 
 ## Rolling Snapshots
+
+{% if page.snapshots.rolling  %}
 {% assign sorted = page.snapshots.rolling | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
@@ -57,7 +59,15 @@ The full list of snapshots is also available as a metadata file:
 | `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ version }}` | [⬇️]({{ s.url}}) |
 {% endfor %}
 
+{%- else -%}
+
+No rolling snapshots yet! Looks like we need some more time. Please check back soon.
+
+{% endif %}
+
 ## Rolling Tarballs
+
+{% if page.snapshots.rolling-tarball %}
 {% assign sorted = page.snapshots.rolling-tarball | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
@@ -76,7 +86,15 @@ The full list of snapshots is also available as a metadata file:
 | `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ version }}` | [⬇️]({{ s.url}}) |
 {% endfor %}
 
+{% else %}
+
+No rolling tarballs yet! Looks like we need some more time. Please check back soon.
+
+{% endif %}
+
 ## Archive Tarballs
+
+{% if page.snapshots.archive-tarball %}
 {% assign sorted = page.snapshots.archive-tarball | sort: 'block_timestamp' | reverse %}
 
 | Filename | Date | Size | Octez version | |
@@ -94,6 +112,12 @@ The full list of snapshots is also available as a metadata file:
 {%- endif -%}
 | `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ version }}` | [⬇️]({{ s.url}}) |
 {% endfor %}
+
+{% else %}
+
+No archive tarballs yet! Looks like we need some more time. Please check back soon.
+
+{% endif %}
 
 [About xtz-shots.io]({{ site.url }}/getting-started/).
 

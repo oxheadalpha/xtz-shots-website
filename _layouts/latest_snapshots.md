@@ -52,6 +52,7 @@ Octez version used for snapshotting: `{{ version }}`
 
 ## Rolling snapshot
 
+{% if page.latest_snapshots.rolling.url %}
 [Download Rolling Snapshot]({{ page.latest_snapshots.rolling.url }})
 
 Block height: `{{ page.latest_snapshots.rolling.block_height }}`
@@ -71,6 +72,9 @@ Checksum (SHA256):
 ```
 
 [Artifact Metadata]({{ page.latest_snapshots.rolling.url }}.json)
+{% else %}
+Uh oh! No rolling snapshot yet. Looks like we still need some more time. Check back soon!
+{% endif %}
 
 ## Archive tarball
 
@@ -97,13 +101,14 @@ Checksum (SHA256):
 
 [Artifact Metadata]({{ page.latest_snapshots.archive-tarball.url }}.json)
 {% else %}
-Uh oh! No archive tarball for Tezos build `{{ page.latest_snapshots.rolling.tezos_version }}` yet. Looks like we still need some more time. Check out https://xtz-shots.io/`{{ page.latest_snapshots.rolling.chain_name }}`/list.html for older artifacts.
+Uh oh! No archive tarball yet. Looks like we still need some more time. Check back soon!
 {% endif %}
 
 ## Rolling tarball
 
 [What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
 
+{% if page.latest_snapshots.rolling-tarball.url %}
 [Download Rolling Tarball]({{ page.latest_snapshots.rolling-tarball.url }})
 
 Block height: `{{ page.latest_snapshots.rolling-tarball.block_height }}`
@@ -123,6 +128,9 @@ Checksum (SHA256):
 ```
 
 [Artifact Metadata]({{ page.latest_snapshots.rolling-tarball.url }}.json)
+{% else %}
+Uh oh! No rolling tarball yet. Looks like we still need some more time. Check back soon!
+{% endif %}
 
 ## How to use
 
