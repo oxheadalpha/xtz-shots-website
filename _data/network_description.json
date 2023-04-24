@@ -14,5 +14,9 @@
   "mumbainet": {
     "human_name": "Mumbainet",
     "description": "Snapshots for Mumbainet, the test chain for the Mumbai protocol."
+  },
+  "nairobinet": {
+    "human_name": "Nairobinet",
+    "description": "Snapshots for Nairobinet, the test chain for the Nairobi protocol."
   }
 }
