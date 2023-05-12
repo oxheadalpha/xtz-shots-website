@@ -154,6 +154,18 @@ tezos-node snapshot import tezos-{{ page.latest_snapshots.rolling.chain_name }}.
 
 TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
 
+```bash
+ $ tree -L 3
+.
+└── node
+    └── data
+        ├── context
+        ├── store
+        └── version.json
+```
+
+Specifically your `--data-dir` octez arg should point to `<path>/node/data`.
+
 Issue the following commands:
 
 ```bash
@@ -171,6 +183,18 @@ curl -L "{{ domain_name }}/archive-tarball" \
 ### Rolling Tarball
 
 TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
+
+```bash
+ $ tree -L 3
+.
+└── node
+    └── data
+        ├── context
+        ├── store
+        └── version.json
+```
+
+Specifically your `--data-dir` octez arg should point to `<path>/node/data`.
 
 Issue the following commands:
 
