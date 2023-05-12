@@ -71,7 +71,7 @@ Checksum (SHA256):
 {{ page.latest_snapshots.rolling.sha256 }}
 ```
 
-[Artifact Metadata]({{ page.latest_snapshots.rolling.url }}.json)
+[Artifact Metadata]({{ domain_name }}/{{ page.latest_snapshots.rolling.filename }}.json)
 {% else %}
 Uh oh! No rolling snapshot yet. Looks like we still need some more time. Check back soon!
 {% endif %}
@@ -99,7 +99,7 @@ Checksum (SHA256):
 {{ page.latest_snapshots.archive-tarball.sha256 }}
 ```
 
-[Artifact Metadata]({{ page.latest_snapshots.archive-tarball.url }}.json)
+[Artifact Metadata]({{ domain_name }}/{{ page.latest_snapshots.archive-tarball.filename }}.json)
 {% else %}
 Uh oh! No archive tarball yet. Looks like we still need some more time. Check back soon!
 {% endif %}
@@ -127,7 +127,7 @@ Checksum (SHA256):
 {{ page.latest_snapshots.rolling-tarball.sha256 }}
 ```
 
-[Artifact Metadata]({{ page.latest_snapshots.rolling-tarball.url }}.json)
+[Artifact Metadata]({{ domain_name }}/{{ page.latest_snapshots.rolling-tarball.filename }}.json)
 {% else %}
 Uh oh! No rolling tarball yet. Looks like we still need some more time. Check back soon!
 {% endif %}
