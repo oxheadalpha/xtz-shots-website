@@ -152,7 +152,7 @@ tezos-node snapshot import tezos-{{ page.latest_snapshots.rolling.chain_name }}.
 
 ### Archive Tarball
 
-:warning: TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
+TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
 
 Issue the following commands:
 
@@ -170,7 +170,7 @@ curl -L "{{ domain_name }}/archive-tarball" \
 
 ### Rolling Tarball
 
-:warning: TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
+TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
 
 Issue the following commands:
 
