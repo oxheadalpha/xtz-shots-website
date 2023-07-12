@@ -140,7 +140,7 @@ Uh oh! No rolling tarball yet. Looks like we still need some more time. Check ba
 Issue the following commands:
 
 ```bash
-wget {{ domain_name }}/{{ page.latest_snapshots.rolling.filename }}
+wget {{ page.latest_snapshots.rolling.url }}
 tezos-node snapshot import {{ page.latest_snapshots.rolling.filename }} --block {{ page.latest_snapshots.rolling.block_hash }}
 ```
 
@@ -170,7 +170,7 @@ Specifically your `--data-dir` octez arg should point to `<path>/node/data`.
 Issue the following commands:
 
 ```bash
-curl -L "{{ domain_name }}/{{ page.latest_snapshots.archive-tarball.filename }}" \
+curl -L "{{ page.latest_snapshots.archive-tarball.url }}" \
 | lz4 -d | tar -x -C "/var/tezos"
 ```
 
@@ -200,7 +200,7 @@ Specifically your `--data-dir` octez arg should point to `<path>/node/data`.
 Issue the following commands:
 
 ```bash
-curl -L "{{ domain_name }}/{{ page.latest_snapshots.rolling-tarball.filename }}" \
+curl -L "{{ page.latest_snapshots.rolling-tarball.url }}" \
 | lz4 -d | tar -x -C "/var/tezos"
 ```
 
