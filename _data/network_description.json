@@ -7,16 +7,12 @@
     "human_name": "Ghostnet",
     "description": "Snapshots for Ghostnet, the long-running Tezos testnet."
   },
-  "limanet": {
-    "human_name": "Limanet",
-    "description": "Snapshots for Limanet, the test chain for the Lima protocol."
-  },
-  "mumbainet": {
-    "human_name": "Mumbainet",
-    "description": "Snapshots for Mumbainet, the test chain for the Mumbai protocol."
-  },
   "nairobinet": {
     "human_name": "Nairobinet",
     "description": "Snapshots for Nairobinet, the test chain for the Nairobi protocol."
+  },
+  "oxfordnet": {
+    "human_name": "Oxfordnet",
+    "description": "Snapshots for Oxfordnet, the test chain for the Oxford protocol."
   }
 }
