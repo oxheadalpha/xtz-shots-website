@@ -77,34 +77,6 @@ Checksum (SHA256):
 Uh oh! No rolling snapshot yet. Looks like we still need some more time. Check back soon!
 {% endif %}
 
-## Archive tarball
-
-[What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
-
-{% if page.latest_snapshots.archive-tarball.url %}
-[Download Archive Tarball]({{ page.latest_snapshots.archive-tarball.url }})
-
-Block height: `{{ page.latest_snapshots.archive-tarball.block_height }}`
-
-Block hash: `{{ page.latest_snapshots.archive-tarball.block_hash }}`
-
-[Verify on TzStats](https://{{ tzstats_subdomain }}tzstats.com/{{ page.latest_snapshots.archive-tarball.block_hash }}){:target="\_blank"} - [Verify on TzKT](https://{{ tzkt_subdomain }}tzkt.io/{{ page.latest_snapshots.archive-tarball.block_hash }}){:target="\_blank"}
-
-Block timestamp: `{{ page.latest_snapshots.archive-tarball.block_timestamp }}`
-
-File Size: `{{ page.latest_snapshots.archive-tarball.filesize }}`
-
-Checksum (SHA256):
-
-```
-{{ page.latest_snapshots.archive-tarball.sha256 }}
-```
-
-[Artifact Metadata]({{ page.latest_snapshots.archive-tarball.url }}.json)
-{% else %}
-Uh oh! No archive tarball yet. Looks like we still need some more time. Check back soon!
-{% endif %}
-
 ## Rolling tarball
 
 [What is a tarball?](https://xtz-shots.io/getting-started/#what-is-a-tarball-) - [Limitation of tarballs](https://xtz-shots.io/getting-started/#caveats)
@@ -149,36 +121,6 @@ Or simply use the permalink:
 ```bash
 wget {{ domain_name }}/rolling -O tezos-{{ page.latest_snapshots.rolling.chain_name }}.rolling
 tezos-node snapshot import tezos-{{ page.latest_snapshots.rolling.chain_name }}.rolling --block {{ page.latest_snapshots.rolling.block_hash }}
-```
-
-### Archive Tarball
-
-TAR path is `node/data/` which corresponds to `/var/tezos/node/data`. Make sure to account for this on your local setup when untarring.
-
-```bash
- $ tree -L 3
-.
-└── node
-    └── data
-        ├── context
-        ├── store
-        └── version.json
-```
-
-Specifically your `--data-dir` octez arg should point to `<path>/node/data`.
-
-Issue the following commands:
-
-```bash
-curl -L "{{ page.latest_snapshots.archive-tarball.url }}" \
-| lz4 -d | tar -x -C "/var/tezos"
-```
-
-Or simply use the permalink:
-
-```bash
-curl -L "{{ domain_name }}/archive-tarball" \
-| lz4 -d | tar -x -C "/var/tezos"
 ```
 
 ### Rolling Tarball

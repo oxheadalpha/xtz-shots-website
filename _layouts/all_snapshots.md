@@ -92,33 +92,6 @@ No rolling tarballs yet! Looks like we need some more time. Please check back so
 
 {% endif %}
 
-## Archive Tarballs
-
-{% if page.snapshots.archive-tarball %}
-{% assign sorted = page.snapshots.archive-tarball | sort: 'block_timestamp' | reverse %}
-
-| Filename | Date | Size | Octez version | |
-| -- | -- | -- | -- |
-{% for s in sorted-%}
-{%- assign version = s.tezos_version.version -%}
-{%- assign major_version = version.major -%}
-{%- assign minor_version = version.minor -%}
-{%- assign additional_info = s.tezos_version.version.additional_info -%}
-{%- if additional_info.rc -%}
-  {%- assign rc = additional_info.rc -%}
-  {%- capture version %}v{{ major_version }}.{{ minor_version }} rc~{{ rc }}{%- endcapture -%}
-{%- else -%}
-  {%- capture version %}v{{ major_version }}.{{ minor_version }}{%- endcapture -%}
-{%- endif -%}
-| `{{ s.filename }}` | `{{ s.block_timestamp }}`| {{ s.filesize }} | `{{ version }}` | [⬇️]({{ s.url}}) |
-{% endfor %}
-
-{% else %}
-
-No archive tarballs yet! Looks like we need some more time. Please check back soon.
-
-{% endif %}
-
 [About xtz-shots.io]({{ site.url }}/getting-started/).
 
 [Tezos documentation](https://tezos.gitlab.io/user/snapshots.html){:target="\_blank"}.
